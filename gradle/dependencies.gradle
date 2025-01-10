@@ -54,6 +54,7 @@ libraries.lwjgl = [
 ]
 
 libraries.lwjgl3 = [
+        "com.github.damn:dev:831de305c8",
         "org.lwjgl:lwjgl:${versions.lwjgl3}",
         "org.lwjgl:lwjgl:${versions.lwjgl3}:natives-linux",
         "org.lwjgl:lwjgl:${versions.lwjgl3}:natives-linux-arm32",
