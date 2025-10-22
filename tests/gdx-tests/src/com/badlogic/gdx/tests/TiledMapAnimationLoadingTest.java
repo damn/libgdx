@@ -18,6 +18,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -44,7 +45,7 @@ public class TiledMapAnimationLoadingTest extends GdxTest {
 	private SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 

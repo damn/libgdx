@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -45,7 +46,7 @@ public class TextAreaTest3 extends GdxTest {
 	private TextField.TextFieldStyle styleFont;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		// default font in the skin has line height == text height, so its impossible to see updated selection/cursor rendering
 		styleDefault = skin.get(TextField.TextFieldStyle.class);

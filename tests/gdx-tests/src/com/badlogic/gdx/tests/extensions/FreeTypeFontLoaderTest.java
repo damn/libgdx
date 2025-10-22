@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.extensions;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.FileHandleResolver;
@@ -19,7 +20,7 @@ public class FreeTypeFontLoaderTest extends GdxTest {
 	SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		manager = new AssetManager();
 
 		// set the loaders for the generator and the fonts themselves

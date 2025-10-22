@@ -28,6 +28,7 @@
 
 package com.badlogic.gdx.tests.box2d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -100,7 +101,7 @@ public abstract class Box2DTest implements ApplicationListener, InputProcessor {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// setup the camera. In Box2D we operate on a
 		// meter scale, pixels won't do it. So we use
 		// an orthographic camera with a viewport of

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles2;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
@@ -34,7 +35,7 @@ public class MipMap2D extends GdxTest {
 	Mesh mesh;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		String vertexShader = "uniform float u_offset;      \n" + "attribute vec4 a_position;   \n"
 			+ "attribute vec2 a_texCoord;   \n" + "varying vec2 v_texCoord;     \n" + "void main()                  \n"
 			+ "{                            \n" + "   gl_Position = a_position; \n" + "   gl_Position.x += u_offset;\n"

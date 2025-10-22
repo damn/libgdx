@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.net;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 
@@ -23,7 +24,7 @@ import com.badlogic.gdx.tests.utils.GdxTest;
  * @author badlogic */
 public class OpenBrowserExample extends GdxTest {
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.net.openURI("https://libgdx.com");
 	}
 }

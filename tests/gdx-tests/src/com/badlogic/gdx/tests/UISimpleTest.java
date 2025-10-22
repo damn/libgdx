@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -40,7 +41,7 @@ public class UISimpleTest extends GdxTest {
 	SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		stage = new Stage();
 		Gdx.input.setInputProcessor(stage);

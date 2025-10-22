@@ -50,7 +50,7 @@ public abstract class AbstractTestWrapper extends GdxTest {
 	boolean dispose = false;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Instancer[] tests = getTestList();
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 		Gdx.app.log("GdxTestGwt", "Setting up for " + tests.length + " tests.");
@@ -81,7 +81,7 @@ public abstract class AbstractTestWrapper extends GdxTest {
 					((InputWrapper)Gdx.input).multiplexer.removeProcessor(ui);
 					test = instancer.instance();
 					Gdx.app.log("GdxTestGwt", "Clicked on " + test.getClass().getName());
-					test.create();
+					test.create(Gdx.app);
 					test.resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 				}
 			});

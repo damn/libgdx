@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
@@ -41,7 +42,7 @@ public class FloatTextureTest extends GdxTest {
 	OrthographicCamera screenCamera;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		fb = new FrameBuffer(Format.RGBA8888, 200, 100, false);
 		ffb = new FloatFrameBuffer(200, 100, false);
 

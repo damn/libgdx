@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.superkoalio;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Color;
@@ -88,7 +89,7 @@ public class SuperKoalio extends GdxTest {
 	private ShapeRenderer debugRenderer;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// load the koala frames, split them, and assign them to Animations
 		koalaTexture = new Texture("data/maps/tiled/super-koalio/koalio.png");
 		TextureRegion[] regions = TextureRegion.split(koalaTexture, 18, 26)[0];

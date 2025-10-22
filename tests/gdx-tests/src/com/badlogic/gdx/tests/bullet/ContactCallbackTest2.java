@@ -16,6 +16,8 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
+import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.physics.bullet.collision.ContactListener;
@@ -65,8 +67,8 @@ public class ContactCallbackTest2 extends BaseBulletTest {
 	TestContactListener contactListener;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		// Create the entities
 		world.add("ground", 0f, 0f, 0f).setColor(0.25f + 0.5f * (float)Math.random(), 0.25f + 0.5f * (float)Math.random(),

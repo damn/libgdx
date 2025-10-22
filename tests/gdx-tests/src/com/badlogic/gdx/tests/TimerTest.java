@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.Timer;
@@ -25,7 +26,7 @@ public class TimerTest extends GdxTest {
 	static final int expectedTests = 10;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.app.log("TimerTest", "Starting tests...");
 		testOnce();
 		testRepeat();

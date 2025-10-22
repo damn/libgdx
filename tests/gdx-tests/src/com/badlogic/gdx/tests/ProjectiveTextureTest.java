@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.Color;
@@ -67,7 +68,7 @@ public class ProjectiveTextureTest extends GdxTest {
 	private Label fps;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		setupScene();
 		setupUI();
 		setupShaders();

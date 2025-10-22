@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.Comparator;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -85,7 +86,7 @@ public class SortedSpriteTest extends GdxTest {
 	MySpriteComparator comparator = new MySpriteComparator();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// create the SpriteBatch
 		batch = new SpriteBatch();
 

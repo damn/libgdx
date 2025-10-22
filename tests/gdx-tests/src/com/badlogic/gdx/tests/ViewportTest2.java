@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
@@ -44,7 +45,7 @@ public class ViewportTest2 extends GdxTest {
 	private BitmapFont font;
 	private OrthographicCamera camera;
 
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont();
 		font.setColor(0, 0, 0, 1);
 

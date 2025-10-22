@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -71,8 +72,8 @@ public class BasicBulletTest extends BulletTest {
 	Array<btRigidBody> bodies = new Array<btRigidBody>();
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		instructions = "Swipe for next test";
 
 		lights = new Environment();

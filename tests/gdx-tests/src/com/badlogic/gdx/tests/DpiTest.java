@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -12,7 +13,7 @@ public class DpiTest extends GdxTest {
 	SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont();
 		batch = new SpriteBatch();
 	}

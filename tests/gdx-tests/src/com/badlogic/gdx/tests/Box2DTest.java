@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
@@ -85,7 +86,7 @@ public class Box2DTest extends GdxTest implements InputProcessor {
 	Body hitBody = null;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// setup the camera. In Box2D we operate on a
 		// meter scale, pixels won't do it. So we use
 		// an orthographic camera with a viewport of

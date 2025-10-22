@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.*;
 import com.badlogic.gdx.utils.JsonWriter.OutputType;
@@ -13,7 +14,7 @@ import java.util.Map;
 public class JsonTest extends GdxTest {
 	Json json;
 
-	public void create () {
+	public void create (Application app) {
 		json = new Json();
 
 // json.fromJson(Test1.class, //

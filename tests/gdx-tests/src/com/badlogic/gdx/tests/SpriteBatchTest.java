@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -171,7 +172,7 @@ public class SpriteBatchTest extends GdxTest implements InputProcessor {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch(1000);
 
 		Pixmap pixmap = new Pixmap(Gdx.files.internal("data/badlogicsmall.jpg"));

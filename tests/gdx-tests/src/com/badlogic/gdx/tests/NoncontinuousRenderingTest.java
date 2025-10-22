@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.Camera;
@@ -56,7 +57,7 @@ public class NoncontinuousRenderingTest extends GdxTest {
 	int colorCycle;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		texture = new Texture("data/badlogic.jpg");
 		region = new TextureRegion(texture);

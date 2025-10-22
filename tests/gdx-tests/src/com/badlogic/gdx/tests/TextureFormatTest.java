@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Pixmap.Format;
@@ -31,7 +32,7 @@ public class TextureFormatTest extends GdxTest {
 	SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		FileHandle file = Gdx.files.internal("data/bobargb8888-32x32.png");
 		nonMipMapped[0] = new Texture(file, Format.Alpha, false);
 		nonMipMapped[1] = new Texture(file, Format.LuminanceAlpha, false);

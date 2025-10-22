@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -19,7 +20,7 @@ public class ContainerTest extends GdxTest {
 	Stage stage;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		stage = new Stage();
 		Gdx.input.setInputProcessor(stage);

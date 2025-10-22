@@ -19,6 +19,7 @@ package com.badlogic.gdx.tests.gwt;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.graphics.Color;
@@ -56,7 +57,7 @@ public class GwtTest extends GdxTest {
 	int numSprites;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Preferences pref = Gdx.app.getPreferences("test");
 		boolean resultb = pref.getBoolean("test");
 		int resulti = pref.getInteger("test");

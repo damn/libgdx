@@ -22,6 +22,7 @@ import java.awt.Container;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglAWTCanvas;
@@ -64,7 +65,7 @@ public class SwingLwjglTest extends JFrame {
 		BitmapFont font;
 
 		@Override
-		public void create () {
+		public void create (Application app) {
 			batch = new SpriteBatch();
 			font = new BitmapFont();
 		}

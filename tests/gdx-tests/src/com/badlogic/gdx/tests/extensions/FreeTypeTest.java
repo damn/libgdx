@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.extensions;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -34,7 +35,7 @@ public class FreeTypeTest extends GdxTest {
 	BitmapFont ftFont;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		boolean flip = false;
 		batch = new SpriteBatch();
 		if (flip) {

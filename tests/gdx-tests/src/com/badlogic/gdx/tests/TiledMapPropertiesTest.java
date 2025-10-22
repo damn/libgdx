@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.maps.MapObject;
@@ -39,7 +40,7 @@ public class TiledMapPropertiesTest extends GdxTest {
 	private boolean success;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		success = false;
 
 		// verify TMJ

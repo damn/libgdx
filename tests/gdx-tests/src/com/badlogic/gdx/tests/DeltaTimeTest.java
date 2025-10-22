@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.TimeUtils;
@@ -25,7 +26,7 @@ public class DeltaTimeTest extends GdxTest {
 	long lastFrameTime;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		lastFrameTime = TimeUtils.nanoTime();
 	}
 

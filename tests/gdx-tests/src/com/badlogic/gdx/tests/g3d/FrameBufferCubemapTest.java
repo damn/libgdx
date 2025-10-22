@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Cubemap;
 import com.badlogic.gdx.graphics.GL20;
@@ -25,8 +26,8 @@ public class FrameBufferCubemapTest extends Basic3DSceneTest {
 	protected ModelBatch cubeBatch;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		camFb = new PerspectiveCamera(90, 800, 800);
 		camFb.position.set(10f, 10f, 10f);

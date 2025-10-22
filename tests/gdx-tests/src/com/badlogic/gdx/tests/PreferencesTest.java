@@ -16,13 +16,14 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 
 public class PreferencesTest extends GdxTest {
-	public void create () {
+	public void create (Application app) {
 		Preferences prefs = Gdx.app.getPreferences(".test");
 		if (prefs.contains("bool")) {
 			if (prefs.getBoolean("bool") != true) throw new GdxRuntimeException("bool failed");

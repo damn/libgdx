@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.extensions;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap.Format;
@@ -79,7 +80,7 @@ public class FreeTypeAtlasTest extends GdxTest {
 		+ "\"!`?'.,;:()[]{}<>|/@\\^$-%+=#_&~*";
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		camera = new OrthographicCamera();
 		batch = new SpriteBatch();
 

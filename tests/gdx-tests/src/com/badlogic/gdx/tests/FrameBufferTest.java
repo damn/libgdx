@@ -28,6 +28,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.Color;
@@ -109,7 +110,7 @@ public class FrameBufferTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		mesh = new Mesh(true, 3, 0, new VertexAttribute(Usage.Position, 3, "a_Position"),
 			new VertexAttribute(Usage.ColorPacked, 4, "a_Color"), new VertexAttribute(Usage.TextureCoordinates, 2, "a_texCoords"));
 		float c1 = Color.toFloatBits(255, 0, 0, 255);

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -54,7 +55,7 @@ public class NinePatchTest extends GdxTest {
 	private final long start = System.currentTimeMillis();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		TestPatch tp;
 
 		// Create all the NinePatches to test

@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.utils;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -14,7 +15,7 @@ public class IssueTest extends GdxTest {
 	Texture img2;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		img = new Texture("data/issue/bark.png");
 		img2 = new Texture("data/issue/leaf.png");

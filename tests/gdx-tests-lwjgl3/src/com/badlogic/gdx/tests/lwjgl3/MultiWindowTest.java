@@ -1,10 +1,7 @@
 
 package com.badlogic.gdx.tests.lwjgl3;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.Graphics.DisplayMode;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3WindowAdapter;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
@@ -35,7 +32,7 @@ public class MultiWindowTest {
 		int index;
 
 		@Override
-		public void create () {
+		public void create (Application app) {
 			System.out.println(Gdx.graphics.getGLVersion().getRendererString());
 			sharedSpriteBatch = new SpriteBatch();
 			sharedTexture = new Texture("data/badlogic.jpg");

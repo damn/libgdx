@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.reflect.ClassReflection;
@@ -87,7 +88,7 @@ public class ReflectionCorrectnessTest extends GdxTest {
 		public Class componentType;
 	}
 
-	public void create () {
+	public void create (Application app) {
 		testIntClass();
 		testIntArrayClass();
 		testJavaLangIntegerClass();

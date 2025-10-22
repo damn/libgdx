@@ -32,7 +32,7 @@ public class GwtInputTest extends GdxTest {
 	int y = 0;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		renderer = new ShapeRenderer();
 		Gdx.input.setInputProcessor(this);
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);

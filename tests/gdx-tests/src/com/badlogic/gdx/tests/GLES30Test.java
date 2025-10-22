@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -16,7 +17,7 @@ public class GLES30Test extends GdxTest {
 	ShaderProgram shaderProgram;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.app.log("GLES30Test", "GL_VERSION = " + Gdx.gl.glGetString(GL20.GL_VERSION));
 		batch = new SpriteBatch();
 		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));

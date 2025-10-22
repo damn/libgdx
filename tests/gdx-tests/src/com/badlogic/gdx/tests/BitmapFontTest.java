@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Colors;
@@ -48,7 +49,7 @@ public class BitmapFontTest extends GdxTest {
 	private Label label;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 		// font = new BitmapFont(Gdx.files.internal("data/verdana39.fnt"), false);
 		font = new BitmapFont(Gdx.files.internal("data/lsans-32-pad.fnt"), false);

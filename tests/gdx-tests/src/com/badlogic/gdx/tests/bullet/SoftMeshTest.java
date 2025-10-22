@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.bullet;
 
 import java.nio.ShortBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
 import com.badlogic.gdx.graphics.g3d.Model;
@@ -63,8 +64,8 @@ public class SoftMeshTest extends BaseBulletTest {
 	}
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		world.maxSubSteps = 20;
 

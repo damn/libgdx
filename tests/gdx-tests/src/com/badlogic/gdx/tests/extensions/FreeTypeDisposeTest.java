@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.extensions;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -27,8 +28,8 @@ public class FreeTypeDisposeTest extends GdxTest {
 	BitmapFont font;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 	}
 
 	public void render () {

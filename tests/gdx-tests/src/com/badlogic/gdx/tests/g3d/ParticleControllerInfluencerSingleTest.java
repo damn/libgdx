@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g3d.Environment;
@@ -49,8 +50,8 @@ public class ParticleControllerInfluencerSingleTest extends BaseG3dTest {
 	StringBuilder builder;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		emitters = new Array<ParticleController>();
 		assets.load(DEFAULT_PARTICLE, Texture.class);
 		assets.load(DEFAULT_SKIN, Skin.class);

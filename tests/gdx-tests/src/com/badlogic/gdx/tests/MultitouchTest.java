@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Peripheral;
 import com.badlogic.gdx.graphics.Color;
@@ -59,7 +60,7 @@ public class MultitouchTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.app.log("Multitouch", "multitouch supported: " + Gdx.input.isPeripheralAvailable(Peripheral.MultitouchScreen));
 		renderer = new ShapeRenderer();
 		camera = new OrthographicCamera();

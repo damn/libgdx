@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
@@ -43,7 +44,7 @@ public class LabelTest extends GdxTest {
 	float scale = 1;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		renderer = new ShapeRenderer();
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));

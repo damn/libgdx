@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.math.Affine2;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Matrix3;
@@ -28,7 +29,7 @@ public class Affine2Test extends GdxTest {
 	static public final float TOLERANCE = 0.005f;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Vector2 trn = new Vector2(30, 50);
 		float rot = 35;
 		float cos = (float)Math.cos(MathUtils.degreesToRadians * rot);

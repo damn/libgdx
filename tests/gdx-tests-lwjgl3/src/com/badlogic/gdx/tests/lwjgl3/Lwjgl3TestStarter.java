@@ -16,10 +16,7 @@
 
 package com.badlogic.gdx.tests.lwjgl3;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Preferences;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Graphics;
@@ -40,6 +37,7 @@ import com.badlogic.gdx.utils.Os;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.SharedLibraryLoader;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import org.lwjgl.system.Configuration;
 
 public class Lwjgl3TestStarter {
 
@@ -52,6 +50,10 @@ public class Lwjgl3TestStarter {
 	 * @param argv command line arguments */
 	public static void main (String[] argv) {
 		options = new CommandLineOptions(argv);
+
+		if (SharedLibraryLoader.os == Os.MacOsX) {
+			Configuration.GLFW_LIBRARY_NAME.set("glfw_async");
+		}
 
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 		config.setWindowedMode(640, 480);
@@ -97,7 +99,7 @@ public class Lwjgl3TestStarter {
 		private Skin skin;
 		TextButton lastClickedTestButton;
 
-		public void create () {
+		public void create (Application app) {
 			System.out.println("OpenGL renderer: " + Gdx.graphics.getGLVersion().getRendererString());
 			System.out.println("OpenGL vendor: " + Gdx.graphics.getGLVersion().getVendorString());
 

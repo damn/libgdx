@@ -18,6 +18,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
@@ -63,7 +64,7 @@ public class TiledMapTemplateObjectLoadingTest extends GdxTest {
 	private final static String TMX_TESTMAP = "data/maps/tiled-objects/test-load-maptemplateobjects.tmx";
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 

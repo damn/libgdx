@@ -16,10 +16,7 @@
 
 package com.badlogic.gdx.tests.math.collision;
 
-import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
-import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
@@ -62,7 +59,7 @@ public class OrientedBoundingBoxTest extends GdxTest implements ApplicationListe
 	private Array<Box> boxes = new Array<>();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
 		batch = new SpriteBatch();
 		modelBatch = new ModelBatch();

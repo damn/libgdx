@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -42,7 +43,7 @@ public class SimpleAnimationTest extends GdxTest {
 	private static final float ANIMATION_SPEED = 0.2f;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.input.setInputProcessor(this);
 		texture = new Texture(Gdx.files.internal("data/animation.png"));
 		TextureRegion[][] regions = TextureRegion.split(texture, 32, 48);

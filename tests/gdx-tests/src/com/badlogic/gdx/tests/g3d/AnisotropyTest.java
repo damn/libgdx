@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
@@ -34,7 +35,7 @@ public class AnisotropyTest extends GdxTest {
 	Matrix4 tmp = new Matrix4();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
 		Gdx.gl.glDepthFunc(GL20.GL_LESS);
 

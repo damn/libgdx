@@ -23,6 +23,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Arrays;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Application.ApplicationType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -40,7 +41,7 @@ public class FilesTest extends GdxTest {
 	SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
 		batch = new SpriteBatch();
 

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Color;
@@ -58,8 +59,8 @@ public class VehicleTest extends BaseBulletTest {
 	}
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		instructions = "Tap to shoot\nArrow keys to drive\nR to reset\nLong press to toggle debug mode\nSwipe for next test";
 
 		final Model chassisModel = objLoader.loadModel(Gdx.files.internal("data/car.obj"));

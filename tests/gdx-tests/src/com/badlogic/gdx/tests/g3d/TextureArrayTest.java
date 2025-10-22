@@ -53,7 +53,7 @@ public class TextureArrayTest extends GdxTest {
 	GLProfiler glProfiler;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		glProfiler = new GLProfiler(Gdx.graphics);
 		glProfiler.enable();
 

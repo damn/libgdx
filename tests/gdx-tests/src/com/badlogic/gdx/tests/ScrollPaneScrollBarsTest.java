@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -38,7 +39,7 @@ public class ScrollPaneScrollBarsTest extends GdxTest {
 	boolean doOnTop = true;
 	private Table bottomLeft, bottomRight, topLeft, topRight, horizOnlyTop, horizOnlyBottom, vertOnlyLeft, vertOnlyRight;
 
-	public void create () {
+	public void create (Application app) {
 		float width = Gdx.graphics.getWidth();
 		float height = Gdx.graphics.getHeight();
 		float btnWidth = 200;

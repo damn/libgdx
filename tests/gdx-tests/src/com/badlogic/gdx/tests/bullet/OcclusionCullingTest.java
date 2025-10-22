@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Camera;
@@ -162,9 +163,9 @@ public class OcclusionCullingTest extends BaseBulletTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.input.setOnscreenKeyboardVisible(true);
-		super.create();
+		super.create(app);
 
 		glProfiler = new GLProfiler(Gdx.graphics);
 		glProfiler.enable();

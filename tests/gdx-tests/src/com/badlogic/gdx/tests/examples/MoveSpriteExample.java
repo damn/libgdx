@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.examples;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -33,7 +34,7 @@ public class MoveSpriteExample extends GdxTest {
 	OrthographicCamera camera;
 	Vector3 spritePosition = new Vector3();
 
-	public void create () {
+	public void create (Application app) {
 		// create a SpriteBatch with which to render the sprite
 		batch = new SpriteBatch();
 

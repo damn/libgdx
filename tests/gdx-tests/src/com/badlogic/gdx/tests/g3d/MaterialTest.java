@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Color;
@@ -55,7 +56,7 @@ public class MaterialTest extends GdxTest {
 	Camera camera;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"), true);
 
 		// Create material attributes. Each material can contain x-number of attributes.

@@ -34,6 +34,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.border.CompoundBorder;
 import javax.swing.plaf.basic.BasicSplitPaneUI;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
@@ -630,7 +631,7 @@ public class FlameMain extends JFrame implements AssetErrorListener {
 		BillboardParticleBatch billboardBatch;
 		ModelInstanceParticleBatch modelInstanceParticleBatch;
 
-		public void create () {
+		public void create (Application app) {
 			if (ui != null) return;
 			int w = Gdx.graphics.getWidth(), h = Gdx.graphics.getHeight();
 			modelBatch = new ModelBatch();

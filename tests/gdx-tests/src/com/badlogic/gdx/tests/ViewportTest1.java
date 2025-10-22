@@ -16,10 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
-import com.badlogic.gdx.InputAdapter;
-import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -45,7 +42,7 @@ public class ViewportTest1 extends GdxTest {
 	Stage stage;
 	Label label;
 
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		Skin skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 

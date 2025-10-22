@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tools.bmfont;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
@@ -25,7 +26,7 @@ public class BitmapFontWriterTest extends ApplicationAdapter {
 	BitmapFont font;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		BitmapFontWriter.FontInfo info = new BitmapFontWriter.FontInfo();
 		info.padding = new BitmapFontWriter.Padding(0, 0, 0, 0);
 

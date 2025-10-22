@@ -51,7 +51,7 @@ public class SpriteBatchPerformanceTest extends GdxTest {
 	private Array<PerfTest> perfTests = new Array<>();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));
 		spriteBatch = new SpriteBatch(8191);
 		bitmapFont = new BitmapFont();

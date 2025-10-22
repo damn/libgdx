@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.assets.AssetDescriptor;
@@ -54,7 +55,7 @@ public class TiledMapJsonAtlasAssetManagerTest extends GdxTest {
 	private int mapType = 0;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 

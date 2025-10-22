@@ -21,6 +21,7 @@ import static com.badlogic.gdx.scenes.scene2d.actions.Actions.fadeOut;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.forever;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.sequence;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -35,7 +36,7 @@ public class GroupFadeTest extends GdxTest {
 	Stage stage;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		texture = new Texture(Gdx.files.internal("data/badlogicsmall.jpg"));
 		stage = new Stage();
 

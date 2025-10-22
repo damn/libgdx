@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Texture;
@@ -64,7 +65,7 @@ public class UITest extends GdxTest {
 	Label fpsLabel;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		texture1 = new Texture(Gdx.files.internal("data/badlogicsmall.jpg"));
 		texture2 = new Texture(Gdx.files.internal("data/badlogic.jpg"));

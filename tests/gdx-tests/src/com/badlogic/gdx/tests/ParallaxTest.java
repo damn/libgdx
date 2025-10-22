@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -59,7 +60,7 @@ public class ParallaxTest extends GdxTest {
 	BitmapFont font;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Texture texture = new Texture(Gdx.files.internal("data/layers.png"));
 		layers = new TextureRegion[3];
 		layers[0] = new TextureRegion(texture, 0, 0, 542, 363);

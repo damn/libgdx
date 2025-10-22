@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Input.OnscreenKeyboardType;
@@ -31,7 +32,7 @@ public class OnscreenKeyboardTest extends GdxTest implements InputProcessor {
 	SpriteBatch batch;
 	OnscreenKeyboardType type = OnscreenKeyboardType.Default;
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		font = new BitmapFont();
 		text = "";

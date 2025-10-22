@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
@@ -31,7 +32,7 @@ public class PixmapBlendingTest extends GdxTest {
 	private Pixmap pixD, pixS1, pixS2;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		if (spriteBatch != null) return;
 		spriteBatch = new SpriteBatch();
 

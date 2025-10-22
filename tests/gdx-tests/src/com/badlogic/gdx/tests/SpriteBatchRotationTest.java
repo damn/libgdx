@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.nio.IntBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -64,7 +65,7 @@ public class SpriteBatchRotationTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 		texture = new Texture(Gdx.files.internal("data/test.png"));
 	}

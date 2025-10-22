@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.GL20;
@@ -36,7 +37,7 @@ public class TextureRegion3DTest extends GdxTest {
 	int index = -1;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.gl.glClearColor(0.2f, 0.3f, 1.0f, 0.f);
 
 		atlas = new TextureAtlas(Gdx.files.internal("data/testpack"));

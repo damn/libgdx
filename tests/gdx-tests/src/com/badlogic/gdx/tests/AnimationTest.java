@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.Texture;
@@ -57,7 +58,7 @@ public class AnimationTest extends GdxTest {
 	FPSLogger fpsLog;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		texture = new Texture(Gdx.files.internal("data/walkanim.png"));
 		TextureRegion[] leftWalkFrames = TextureRegion.split(texture, 64, 64)[0];
 		Array<TextureRegion> rightWalkFrames = new Array<>(TextureRegion[]::new);

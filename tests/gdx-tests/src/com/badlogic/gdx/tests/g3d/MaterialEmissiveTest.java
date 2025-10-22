@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.*;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
@@ -57,7 +58,7 @@ public class MaterialEmissiveTest extends GdxTest {
 	Camera camera;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		diffuseTexture = new Texture(Gdx.files.internal("data/badlogic.jpg"), true);
 		emissiveTexture = new Texture(Gdx.files.internal("data/particle-star.png"), true);
 

@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Texture;
@@ -59,8 +60,8 @@ public class CharacterTest extends BaseBulletTest {
 	}
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		instructions = "Tap to shoot\nArrow keys to move\nR to reset\nLong press to toggle debug mode\nSwipe for next test";
 
 		// Create a visual representation of the character (note that we don't use the physics part of BulletEntity, we'll do that

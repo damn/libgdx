@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -38,7 +39,7 @@ public class ETC1Test extends GdxTest {
 	BitmapFont font;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont();
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		controller = new OrthoCamController(camera);

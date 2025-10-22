@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Cursor;
@@ -34,8 +35,8 @@ public class SystemCursorTest extends GdxTest {
 	private Skin skin;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		stage = new Stage(new ScreenViewport());
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 

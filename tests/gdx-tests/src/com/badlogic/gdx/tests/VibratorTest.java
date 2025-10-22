@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
@@ -38,7 +39,7 @@ public class VibratorTest extends GdxTest {
 	Skin skin;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		stage = new Stage();
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));

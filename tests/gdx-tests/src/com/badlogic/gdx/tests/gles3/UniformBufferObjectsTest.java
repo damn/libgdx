@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles3;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL30;
 import com.badlogic.gdx.graphics.Texture;
@@ -58,7 +59,7 @@ public class UniformBufferObjectsTest extends GdxTest {
 	float elapsedTime = 0;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		random = new RandomXS128();
 		batch = new SpriteBatch();
 		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));

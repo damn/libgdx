@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Files.FileType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
@@ -41,7 +42,7 @@ public class BitmapFontAlignmentTest extends GdxTest {
 	GlyphLayout layout;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.input.setInputProcessor(new InputAdapter() {
 			public boolean touchDown (int x, int y, int pointer, int newParam) {
 				renderMode = (renderMode + 1) % 6;

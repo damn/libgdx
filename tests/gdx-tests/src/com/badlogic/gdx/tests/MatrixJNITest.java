@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.math.Vector3;
@@ -28,7 +29,7 @@ public class MatrixJNITest extends GdxTest {
 	private static final float EPSILON = 1e-6f;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		testRotateTowardDirection();
 		testRotateTowardTarget();

@@ -1,6 +1,8 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
+import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.bullet.collision.CustomCollisionDispatcher;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionConfiguration;
@@ -41,8 +43,8 @@ public class CollisionDispatcherTest extends BaseBulletTest {
 	}
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		// Create the entities
 		world.add("ground", 0f, 0f, 0f).setColor(0.25f + 0.5f * (float)Math.random(), 0.25f + 0.5f * (float)Math.random(),

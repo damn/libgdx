@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -24,7 +25,7 @@ public class TiledDrawableTest extends GdxTest {
 	private TiledDrawable tiledDrawable;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		batch = new SpriteBatch();
 		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);

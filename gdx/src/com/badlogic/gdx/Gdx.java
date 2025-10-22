@@ -27,6 +27,10 @@ import com.badlogic.gdx.graphics.GL32;
  * <p>
  * This is normally a design faux pas but in this case is better than the alternatives.
  * @author mzechner */
+
+// 3164 Usages !!
+	// Let's see how many ApplicationListener changes will remove
+
 public class Gdx {
 	public static Application app;
 	public static Graphics graphics;

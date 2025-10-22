@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
@@ -109,7 +110,7 @@ public class GestureDetectorTest extends GdxTest implements ApplicationListener 
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		texture = new Texture("data/stones.jpg");
 		batch = new SpriteBatch();
 		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());

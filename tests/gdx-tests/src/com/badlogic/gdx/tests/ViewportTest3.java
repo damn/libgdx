@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
@@ -49,7 +50,7 @@ public class ViewportTest3 extends GdxTest {
 	public ModelBatch modelBatch;
 	public ModelInstance boxInstance;
 
-	public void create () {
+	public void create (Application app) {
 		modelBatch = new ModelBatch();
 		modelBuilder = new ModelBuilder();
 

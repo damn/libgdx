@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.nio.ByteBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -35,7 +36,7 @@ public class PixmapTest extends GdxTest {
 	Texture textureCustom;
 	TextureRegion regionCustom;
 
-	public void create () {
+	public void create (Application app) {
 		// Create an empty dynamic pixmap
 		pixmap = new Pixmap(800, 480, Pixmap.Format.RGBA8888);
 		pixmapCustom = new Pixmap(256, 256, Pixmap.Format.RGBA8888);

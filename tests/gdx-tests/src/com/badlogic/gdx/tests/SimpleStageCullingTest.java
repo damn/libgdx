@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -108,7 +109,7 @@ public class SimpleStageCullingTest extends GdxTest {
 	BitmapFont font;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// create a stage and a camera controller so we can pan the view.
 		stage = new Stage();
 		;

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.GL20;
@@ -32,7 +33,7 @@ public class SoftKeyboardTest extends GdxTest {
 	SimpleCharSequence textBuffer;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// we want to render the input, so we need
 		// a sprite batch and a font
 		batch = new SpriteBatch();

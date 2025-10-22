@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.conformance;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
@@ -17,7 +18,7 @@ public class AudioSoundAndMusicIsolationTest extends GdxTest {
 	private long soundID;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		sound = Gdx.audio.newSound(Gdx.files.getFileHandle("data/shotgun.ogg", FileType.Internal));
 		music = Gdx.audio.newMusic(Gdx.files.internal("data/8.12.loop.wav"));
 

@@ -1,13 +1,14 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 
 public class ShortSoundTest extends GdxTest {
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.audio.newSound(Gdx.files.internal("data/tic.ogg")).play();
 	}
 

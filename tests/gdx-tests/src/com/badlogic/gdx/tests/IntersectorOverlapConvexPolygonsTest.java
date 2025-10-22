@@ -33,7 +33,7 @@ public class IntersectorOverlapConvexPolygonsTest extends GdxTest {
 	private Vector3 mouseCoords = new Vector3();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false);

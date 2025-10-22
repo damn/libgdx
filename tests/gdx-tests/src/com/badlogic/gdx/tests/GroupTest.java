@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -54,7 +55,7 @@ public class GroupTest extends GdxTest {
 	HorizontalGroup horiz, horizWrap;
 	VerticalGroup vert, vertWrap;
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		font = new BitmapFont();
 		renderer = new ShapeRenderer();

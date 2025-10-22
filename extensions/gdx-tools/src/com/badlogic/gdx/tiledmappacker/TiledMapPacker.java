@@ -34,6 +34,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.assets.loaders.FileHandleResolver;
 import com.badlogic.gdx.graphics.g2d.PixmapPacker;
 import com.badlogic.gdx.maps.ImageResolver;
@@ -1005,7 +1006,7 @@ public class TiledMapPacker {
 			}
 
 			@Override
-			public void create () {
+			public void create (Application app) {
 				TiledMapPacker packer = new TiledMapPacker(packerSettings);
 
 				if (!inputDir.exists()) {

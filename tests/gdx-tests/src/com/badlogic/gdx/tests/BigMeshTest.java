@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Color;
@@ -55,7 +56,7 @@ public class BigMeshTest extends GdxTest {
 	private final Array<RenderableProvider> renderableProviders = new Array<RenderableProvider>();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		batch = new ModelBatch();
 

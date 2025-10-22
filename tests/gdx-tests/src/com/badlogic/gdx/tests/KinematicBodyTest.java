@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -35,7 +36,7 @@ public class KinematicBodyTest extends GdxTest {
 	World world;
 	Box2DDebugRenderer renderer;
 
-	public void create () {
+	public void create (Application app) {
 		cam = new OrthographicCamera(48, 32);
 		cam.position.set(0, 15, 0);
 		renderer = new Box2DDebugRenderer();

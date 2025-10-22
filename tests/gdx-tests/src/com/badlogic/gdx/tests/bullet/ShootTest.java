@@ -16,6 +16,8 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
+
 /** @author Xoppa */
 public class ShootTest extends BaseBulletTest {
 	final int BOXCOUNT_X = 5;
@@ -29,8 +31,8 @@ public class ShootTest extends BaseBulletTest {
 	BulletEntity ground;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		// Create the entities
 		(ground = world.add("ground", 0f, 0f, 0f)).setColor(0.25f + 0.5f * (float)Math.random(),

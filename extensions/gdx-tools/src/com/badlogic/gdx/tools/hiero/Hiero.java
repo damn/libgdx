@@ -1404,7 +1404,7 @@ public class Hiero extends JFrame {
 		SpriteBatch batch;
 		int width, height;
 
-		public void create () {
+		public void create (Application app) {
 			glClearColor(0, 0, 0, 0);
 			glClearDepth(1);
 			glDisable(GL_LIGHTING);

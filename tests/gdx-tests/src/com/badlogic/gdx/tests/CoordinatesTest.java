@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Color;
@@ -45,7 +46,7 @@ public class CoordinatesTest extends GdxTest {
 	private final Vector3 vec3 = new Vector3();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		TextureRegionDrawable logo = new TextureRegionDrawable(

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -27,7 +28,7 @@ public class TextureDataTest extends GdxTest {
 	private SpriteBatch spriteBatch;
 	private Texture texture;
 
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 // texture = new Texture(new PixmapTextureData(new Pixmap(Gdx.files.internal("data/t8890.png")), null, false, true));
 		texture = new Texture(new FileTextureData(Gdx.files.internal("data/t8890.png"), null, null, false));

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -28,7 +29,7 @@ public class ImageScaleTest extends GdxTest {
 	Stage stage;
 	Texture texture;
 
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		Gdx.input.setInputProcessor(stage);
 

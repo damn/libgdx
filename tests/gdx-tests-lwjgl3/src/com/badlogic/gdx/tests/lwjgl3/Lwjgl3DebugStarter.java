@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.lwjgl3;
 
 import java.awt.image.BufferedImage;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics.DisplayMode;
 import com.badlogic.gdx.Input.Keys;
@@ -48,7 +49,7 @@ public class Lwjgl3DebugStarter {
 			Texture texture;
 
 			@Override
-			public void create () {
+			public void create (Application app) {
 				Gdx.app.addLifecycleListener(new LifecycleListener() {
 					@Override
 					public void pause () {

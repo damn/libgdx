@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -61,7 +62,7 @@ public class Box2DCharacterControllerTest extends GdxTest implements Application
 	float TICK = 1 / 60f;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		world = new World(new Vector2(0, -40), true);
 		renderer = new Box2DDebugRenderer();
 		cam = new OrthographicCamera(28, 20);

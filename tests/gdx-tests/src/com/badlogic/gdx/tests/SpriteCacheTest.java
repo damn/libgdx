@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
@@ -111,7 +112,7 @@ public class SpriteCacheTest extends GdxTest implements InputProcessor {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteCache = new SpriteCache(1000, true);
 
 		texture = new Texture(Gdx.files.internal("data/badlogicsmall.jpg"));

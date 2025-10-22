@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.net;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Net;
 import com.badlogic.gdx.Net.HttpRequest;
@@ -72,7 +73,7 @@ public class NetAPITest extends GdxTest implements HttpResponseListener {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		font = new BitmapFont();

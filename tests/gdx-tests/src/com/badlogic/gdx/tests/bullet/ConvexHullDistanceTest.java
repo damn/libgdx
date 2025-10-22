@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Mesh;
@@ -42,8 +43,8 @@ public class ConvexHullDistanceTest extends BaseBulletTest {
 	private ShapeRenderer shapeRenderer;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		final Model carModel = objLoader.loadModel(Gdx.files.internal("data/car.obj"));
 		disposables.add(carModel);

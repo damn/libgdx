@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Color;
@@ -61,7 +62,7 @@ public class StageTest extends GdxTest implements InputProcessor {
 	Label fps;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		texture = new Texture(Gdx.files.internal("data/badlogicsmall.jpg"));
 		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);

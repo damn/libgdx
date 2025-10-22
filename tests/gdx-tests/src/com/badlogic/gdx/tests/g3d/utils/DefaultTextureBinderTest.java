@@ -3,6 +3,7 @@ package com.badlogic.gdx.tests.g3d.utils;
 
 import java.nio.IntBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap.Format;
@@ -22,7 +23,7 @@ public class DefaultTextureBinderTest extends GdxTest {
 	private IntIntMap map;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		binderLRU = new DefaultTextureBinder(DefaultTextureBinder.LRU, 0, 4);
 		binderRR = new DefaultTextureBinder(DefaultTextureBinder.ROUNDROBIN, 0, 4);
 		textures = new Array<Texture>();

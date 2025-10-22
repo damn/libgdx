@@ -3,6 +3,7 @@ package com.badlogic.gdx.tests.lwjgl3;
 
 import java.awt.image.BufferedImage;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
@@ -27,7 +28,7 @@ public class DragNDropTest extends GdxTest {
 	private Table root;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		BufferedImage image = new BufferedImage(10, 10, BufferedImage.TYPE_4BYTE_ABGR);
 		stage = new Stage();
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));

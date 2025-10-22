@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
@@ -61,7 +62,7 @@ public class MusicTest extends GdxTest {
 	float time;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		batch = new SpriteBatch();
 

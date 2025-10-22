@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL20;
@@ -40,7 +41,7 @@ public class SimpleDecalTest extends GdxTest {
 	PerspectiveCamController controller;
 	FPSLogger logger = new FPSLogger();
 
-	public void create () {
+	public void create (Application app) {
 		float width = Gdx.graphics.getWidth();
 		float height = Gdx.graphics.getHeight();
 

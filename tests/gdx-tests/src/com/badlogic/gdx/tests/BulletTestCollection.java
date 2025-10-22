@@ -65,10 +65,10 @@ public class BulletTestCollection extends GdxTest implements InputProcessor, Ges
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		if (app == null) {
 			app = Gdx.app;
-			tests[testIndex].create();
+			tests[testIndex].create(app);
 		}
 
 		cameraController = new CameraInputController(tests[testIndex].camera);
@@ -113,7 +113,7 @@ public class BulletTestCollection extends GdxTest implements InputProcessor, Ges
 		System.gc();
 		testIndex++;
 		if (testIndex >= tests.length) testIndex = 0;
-		tests[testIndex].create();
+		tests[testIndex].create(app);
 		cameraController.camera = tests[testIndex].camera;
 		app.log("TestCollection", "created test '" + tests[testIndex].getClass().getName() + "'");
 

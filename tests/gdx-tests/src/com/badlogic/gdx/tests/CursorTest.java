@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Cursor;
@@ -33,7 +34,7 @@ public class CursorTest extends GdxTest {
 	Cursor cursor3;
 	boolean cursorActive = false;
 
-	public void create () {
+	public void create (Application app) {
 
 		Pixmap pixmap1 = new Pixmap(Gdx.files.internal("data/bobargb8888-32x32.png"));
 		cursor1 = Gdx.graphics.newCursor(pixmap1, 16, 16);

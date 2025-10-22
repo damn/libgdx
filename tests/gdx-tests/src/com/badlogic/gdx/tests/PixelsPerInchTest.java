@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -30,7 +31,7 @@ public class PixelsPerInchTest extends GdxTest {
 	Texture texture;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
 		batch = new SpriteBatch();
 		texture = new Texture(Gdx.files.internal("data/badlogicsmall.jpg"));

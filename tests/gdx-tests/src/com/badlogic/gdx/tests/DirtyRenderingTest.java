@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.tests.utils.GdxTest;
@@ -27,7 +28,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
  * @author mzechner */
 public class DirtyRenderingTest extends GdxTest {
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// disable continuous rendering
 		Gdx.graphics.setContinuousRendering(false);
 		Gdx.app.log("DirtyRenderingTest", "created");

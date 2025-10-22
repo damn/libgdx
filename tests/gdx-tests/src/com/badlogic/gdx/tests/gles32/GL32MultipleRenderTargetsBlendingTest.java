@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles32;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Application.ApplicationType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -106,7 +107,7 @@ public class GL32MultipleRenderTargetsBlendingTest extends GdxTest {
 	private ShaderProgram alphaShader;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		FrameBufferBuilder builder = new FrameBufferBuilder(64, 64);
 		builder.addColorTextureAttachment(GL30.GL_RGBA8, GL30.GL_RGBA, GL30.GL_UNSIGNED_BYTE);
 		builder.addColorTextureAttachment(GL30.GL_RGBA8, GL30.GL_RGBA, GL30.GL_UNSIGNED_BYTE);

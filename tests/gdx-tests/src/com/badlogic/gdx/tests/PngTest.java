@@ -17,6 +17,8 @@
 package com.badlogic.gdx.tests;
 
 import java.io.IOException;
+
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
@@ -31,7 +33,7 @@ public class PngTest extends GdxTest {
 	SpriteBatch batch;
 	Texture badlogic, screenshot;
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		badlogic = new Texture(Gdx.files.internal("data/badlogic.jpg"));
 	}

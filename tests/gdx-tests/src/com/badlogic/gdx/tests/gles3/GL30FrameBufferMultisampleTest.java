@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles3;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL30;
 import com.badlogic.gdx.graphics.Pixmap.Format;
@@ -38,7 +39,7 @@ public class GL30FrameBufferMultisampleTest extends GdxTest {
 	private ShapeRenderer shapes;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		fboMS = new FrameBufferBuilder(64, 64, 4).addColorRenderBuffer(GL30.GL_RGBA8).build();
 		fbo = new FrameBuffer(Format.RGBA8888, 64, 64, false);
 		fbo.getColorBufferTexture().setFilter(TextureFilter.Nearest, TextureFilter.Nearest);

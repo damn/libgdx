@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.gles32;
 
 import java.nio.ShortBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -53,7 +54,7 @@ public class GL32OffsetElementsTest extends GdxTest {
 		"    gl_FragColor = v_color;\n" + //
 		"}"; //
 
-	public void create () {
+	public void create (Application app) {
 		indices = BufferUtils.newShortBuffer(6);
 		indices.put(new short[] {
 			// @off

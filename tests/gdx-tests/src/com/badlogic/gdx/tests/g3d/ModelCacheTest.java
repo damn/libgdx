@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.ModelCache;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
@@ -14,8 +15,8 @@ public class ModelCacheTest extends Benchmark3DTest {
 	CheckBox cacheCheckBox;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		modelCache = new ModelCache();
 
 		cacheCheckBox = new CheckBox("Cache", skin);

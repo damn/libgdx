@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.conformance;
 
 import java.util.Arrays;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics.DisplayMode;
 import com.badlogic.gdx.tests.utils.GdxTest;
@@ -25,7 +26,7 @@ import com.badlogic.gdx.tests.utils.GdxTest;
 public class DisplayModeTest extends GdxTest {
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		DisplayMode displayMode = Gdx.graphics.getDisplayMode();
 		DisplayMode displayModeForMonitor = Gdx.graphics.getDisplayMode(Gdx.graphics.getMonitor());
 		DisplayMode[] displayModes = Gdx.graphics.getDisplayModes();

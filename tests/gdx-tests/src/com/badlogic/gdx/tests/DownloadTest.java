@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -16,7 +17,7 @@ public class DownloadTest extends GdxTest {
 	Queue<String> urls = new Queue<>();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		urls.addLast("https://www.google.at/images/srpr/logo11w.png");
 		urls.addLast("https://placekitten.com/200/300");
 		urls.addLast("https://i.imgur.com/snfjsWx.png");

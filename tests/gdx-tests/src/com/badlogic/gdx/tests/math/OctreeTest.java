@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.math;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -67,7 +68,7 @@ public class OctreeTest extends GdxTest implements ApplicationListener {
 	private GameObject lastSelected;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		modelBatch = new ModelBatch();
 		lights = new Environment();
 		lights.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1.f));

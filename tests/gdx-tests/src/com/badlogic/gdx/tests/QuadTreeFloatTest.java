@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -16,7 +17,7 @@ public class QuadTreeFloatTest extends GdxTest {
 	ShapeRenderer shapes;
 	FloatArray results = new FloatArray(false, 16);
 
-	public void create () {
+	public void create (Application app) {
 		shapes = new ShapeRenderer();
 		q.setBounds(10, 10, 400, 400);
 		for (int i = 0; i < 100; i++) {

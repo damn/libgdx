@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -34,7 +35,7 @@ public class ImageTest extends GdxTest {
 	TextureRegion image2;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		image2 = new TextureRegion(new Texture(Gdx.files.internal("data/badlogic.jpg")));
 		ui = new Stage();

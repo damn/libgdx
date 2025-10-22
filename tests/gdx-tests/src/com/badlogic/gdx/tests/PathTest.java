@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -52,7 +53,7 @@ public class PathTest extends GdxTest {
 	boolean zigzag = false;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		renderer = new ImmediateModeRenderer20(false, false, 0);
 		spriteBatch = new SpriteBatch();
 		obj = new Sprite(new Texture(Gdx.files.internal("data/badlogicsmall.jpg")));

@@ -21,6 +21,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Arrays;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -87,7 +88,7 @@ public class AnnotationTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont();
 		batch = new SpriteBatch();
 

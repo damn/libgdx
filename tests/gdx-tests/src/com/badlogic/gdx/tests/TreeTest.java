@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.MathUtils;
@@ -43,7 +44,7 @@ public class TreeTest extends GdxTest {
 		}
 	}
 
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		Gdx.input.setInputProcessor(stage);
 

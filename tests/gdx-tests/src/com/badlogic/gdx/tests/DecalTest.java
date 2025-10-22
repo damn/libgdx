@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.LinkedList;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
@@ -47,7 +48,7 @@ public class DecalTest extends GdxTest {
 	float h;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Gdx.gl.glEnable(GL20.GL_DEPTH_TEST);
 		Gdx.gl.glDepthFunc(GL20.GL_LESS);
 

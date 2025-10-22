@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -32,7 +33,7 @@ public class GWTLossyPremultipliedAlphaTest extends GdxTest {
 	private Texture goodTexture;
 	private Texture badTexture;
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		// Load a texture with premultiplied alpha
 		FileTextureData data = new FileTextureData(Gdx.files.internal("data/premultiplied_alpha_test.png"), null, null, false);

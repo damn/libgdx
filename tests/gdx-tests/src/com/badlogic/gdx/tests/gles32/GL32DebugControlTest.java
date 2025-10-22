@@ -20,6 +20,7 @@ import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import java.nio.charset.Charset;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -223,7 +224,7 @@ public class GL32DebugControlTest extends GdxTest {
 	private boolean useCallback = true;
 	private boolean enableNotifications = false;
 
-	public void create () {
+	public void create (Application app) {
 
 		GLDebug.enableOverall(true);
 		GLDebug.setCallback(useCallback ? GLDebug.loggingCallback : null);

@@ -8,6 +8,7 @@ import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.util.zip.GZIPOutputStream;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.headless.HeadlessApplication;
@@ -74,7 +75,7 @@ public class KTXProcessor {
 		}
 
 		@Override
-		public void create () {
+		public void create (Application app) {
 			boolean isCubemap = args.length == 7 || args.length == 8 || args.length == 9;
 			boolean isTexture = args.length == 2 || args.length == 3 || args.length == 4;
 			boolean isPackETC1 = false, isAlphaAtlas = false, isGenMipMaps = false;

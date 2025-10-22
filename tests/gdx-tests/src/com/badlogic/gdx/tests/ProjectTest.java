@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.Random;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Camera;
@@ -48,7 +49,7 @@ public class ProjectTest extends GdxTest {
 	TextureRegion logo;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		ObjLoader objLoader = new ObjLoader();
 		sphere = objLoader.loadModel(Gdx.files.internal("data/sphere.obj"));
 		sphere.materials.get(0).set(new ColorAttribute(ColorAttribute.Diffuse, Color.WHITE));

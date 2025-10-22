@@ -91,7 +91,7 @@ public class MultipleRenderTargetTest extends GdxTest {
 	final int NUM_LIGHTS = 10;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// use default prepend shader code for batch, some gpu drivers are less forgiving
 		batch = new SpriteBatch();
 

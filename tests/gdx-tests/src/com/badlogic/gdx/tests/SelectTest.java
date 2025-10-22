@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.tests.utils.GdxTest;
@@ -33,7 +34,7 @@ public class SelectTest extends GdxTest {
 	private static boolean quiet;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		int n = 100;
 		player = createDummies(n);
 		enemy = createDummies(n);

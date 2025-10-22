@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
@@ -41,7 +42,7 @@ public class TideMapAssetManagerTest extends GdxTest {
 	private SpriteBatch batch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 

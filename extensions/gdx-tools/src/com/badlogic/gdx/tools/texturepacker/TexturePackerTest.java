@@ -18,6 +18,7 @@ package com.badlogic.gdx.tools.texturepacker;
 
 import java.util.Random;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
@@ -36,7 +37,7 @@ public class TexturePackerTest extends ApplicationAdapter {
 	ShapeRenderer renderer;
 	Array<Page> pages;
 
-	public void create () {
+	public void create (Application app) {
 		renderer = new ShapeRenderer();
 	}
 

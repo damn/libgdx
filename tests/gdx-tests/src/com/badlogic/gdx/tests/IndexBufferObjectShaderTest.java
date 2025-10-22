@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -59,7 +60,7 @@ public class IndexBufferObjectShaderTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		String vertexShader = "attribute vec4 a_position;    \n" + "attribute vec4 a_color;\n" + "attribute vec2 a_texCoords;\n"
 			+ "varying vec4 v_color;" + "varying vec2 v_texCoords;" + "void main()                  \n"
 			+ "{                            \n" + "   v_color = vec4(a_color.x, a_color.y, a_color.z, 1); \n"

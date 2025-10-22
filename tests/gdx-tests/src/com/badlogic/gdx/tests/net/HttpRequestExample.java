@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.net;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Net.HttpMethods;
 import com.badlogic.gdx.Net.HttpRequest;
@@ -27,7 +28,7 @@ import com.badlogic.gdx.tests.utils.GdxTest;
  * @author badlogic */
 public class HttpRequestExample extends GdxTest {
 	@Override
-	public void create () {
+	public void create (Application app) {
 		HttpRequest request = new HttpRequest(HttpMethods.GET);
 		request.setUrl("https://raw.githubusercontent.com/libgdx/libgdx/master/AUTHORS");
 		Gdx.net.sendHttpRequest(request, new HttpResponseListener() {

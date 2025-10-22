@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.BitmapFontLoader.BitmapFontParameter;
@@ -25,7 +26,7 @@ public class BitmapFontAtlasRegionTest extends GdxTest {
 	private static final String ATLAS = "data/atlased-fonts.txt";
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		this.batch = new SpriteBatch();
 		this.assets = new AssetManager();
 

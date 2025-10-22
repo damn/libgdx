@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.Color;
@@ -43,7 +44,7 @@ public class Basic3DTest extends GdxTest {
 	public Environment environment;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		modelBatch = new ModelBatch(new DefaultShaderProvider());
 
 		environment = new Environment();

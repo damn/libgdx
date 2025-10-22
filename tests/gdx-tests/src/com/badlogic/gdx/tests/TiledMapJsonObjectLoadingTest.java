@@ -18,6 +18,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -52,7 +53,7 @@ public class TiledMapJsonObjectLoadingTest extends GdxTest {
 	private String loadingStatus;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 

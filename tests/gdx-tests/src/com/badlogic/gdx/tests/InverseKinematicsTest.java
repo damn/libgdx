@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -54,7 +55,7 @@ public class InverseKinematicsTest extends GdxTest {
 	Vector2 diff = new Vector2();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		float aspect = Gdx.graphics.getWidth() / (float)Gdx.graphics.getHeight();
 		camera = new OrthographicCamera(15 * aspect, 15);
 		camera.update();

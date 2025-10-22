@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.Color;
@@ -46,7 +47,7 @@ public abstract class BaseG3dTest extends GdxTest {
 	public final Color bgColor = new Color(0, 0, 0, 1);
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		if (assets == null) assets = new AssetManager();
 
 		modelBatch = new ModelBatch();

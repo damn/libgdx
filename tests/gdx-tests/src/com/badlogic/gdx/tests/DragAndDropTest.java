@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -37,7 +38,7 @@ import com.badlogic.gdx.utils.Null;
 public class DragAndDropTest extends GdxTest {
 	Stage stage;
 
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		Gdx.input.setInputProcessor(stage);
 

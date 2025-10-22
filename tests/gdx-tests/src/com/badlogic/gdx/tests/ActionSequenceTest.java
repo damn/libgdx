@@ -20,6 +20,7 @@ import static com.badlogic.gdx.scenes.scene2d.actions.Actions.moveBy;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.parallel;
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.sequence;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -39,7 +40,7 @@ public class ActionSequenceTest extends GdxTest implements Runnable {
 	Texture texture;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"), false);
 		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);

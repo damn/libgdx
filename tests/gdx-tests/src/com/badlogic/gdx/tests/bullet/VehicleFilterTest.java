@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.physics.bullet.dynamics.*;
 
@@ -34,8 +35,8 @@ public class VehicleFilterTest extends VehicleTest {
 	}
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		chassis.setColor(Color.BLUE);
 	}
 

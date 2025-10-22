@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g3d.Model;
@@ -16,8 +17,8 @@ public class GimpactTest extends BaseBulletTest {
 	btTriangleIndexVertexArray chassisVertexArray;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		final Model chassisModel = objLoader.loadModel(Gdx.files.internal("data/car.obj"));
 		disposables.add(chassisModel);

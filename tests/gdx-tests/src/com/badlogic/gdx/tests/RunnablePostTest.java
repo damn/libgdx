@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 
@@ -37,7 +38,7 @@ public class RunnablePostTest extends GdxTest {
 		}
 	};
 
-	public void create () {
+	public void create (Application app) {
 		Thread.setDefaultUncaughtExceptionHandler(exHandler);
 	}
 

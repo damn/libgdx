@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.extensions;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -47,7 +48,7 @@ public class InternationalFontsTest extends GdxTest {
 	BitmapFont thaiFont;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("data/unbom.ttf"));
 
 		FreeTypeFontParameter parameter = new FreeTypeFontParameter();

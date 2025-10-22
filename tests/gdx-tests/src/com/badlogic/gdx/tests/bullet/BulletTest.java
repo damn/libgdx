@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
@@ -33,7 +34,7 @@ public class BulletTest extends InputAdapter implements ApplicationListener, Ges
 	public PerspectiveCamera camera;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 	}
 
 	@Override

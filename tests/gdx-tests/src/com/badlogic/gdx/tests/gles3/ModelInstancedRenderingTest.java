@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles3;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
@@ -49,7 +50,7 @@ public class ModelInstancedRenderingTest extends GdxTest {
 	private final static int INSTANCE_COUNT = INSTANCE_COUNT_SQRT * INSTANCE_COUNT_SQRT;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		if (Gdx.gl30 == null) {
 			throw new GdxRuntimeException("GLES 3.0 profile required for this test");
 		}

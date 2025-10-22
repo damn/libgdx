@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -30,7 +31,7 @@ public class AlphaTest extends GdxTest {
 	Texture texture;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Pixmap pixmap = new Pixmap(256, 256, Format.RGBA8888);
 		pixmap.setColor(1, 0, 0, 1);
 		pixmap.fill();

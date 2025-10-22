@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.Color;
@@ -37,7 +38,7 @@ public class ShapeRendererTest extends GdxTest {
 	SpriteBatch batch;
 	BitmapFont font;
 
-	public void create () {
+	public void create (Application app) {
 		renderer = new ShapeRenderer();
 		cam = new PerspectiveCamera(47, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		cam.position.set(0, 0, 2);

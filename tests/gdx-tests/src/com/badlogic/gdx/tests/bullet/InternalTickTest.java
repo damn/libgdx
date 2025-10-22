@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionObjectArray;
 import com.badlogic.gdx.physics.bullet.dynamics.InternalTickCallback;
@@ -55,8 +56,8 @@ public class InternalTickTest extends BaseBulletTest {
 	TestInternalTickCallback internalTickCallback;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		internalTickCallback = new TestInternalTickCallback((btDynamicsWorld)world.collisionWorld);
 

@@ -19,6 +19,7 @@ package com.badlogic.gdx.tests.gles2;
 import java.nio.FloatBuffer;
 import java.nio.ByteBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
@@ -56,7 +57,7 @@ public class GlTexImage2D extends GdxTest {
 	ByteBuffer textureColorData = BufferUtils.newByteBuffer(12);
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		float[] vertices = {-1.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, -1.0f, 1.0f};
 		float[] pixmapVertices = {1.0f, 0.0f, -1.0f, 0.0f, -1.0f, -1.0f, 1.0f, -1.0f};

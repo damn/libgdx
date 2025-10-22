@@ -19,6 +19,7 @@ package com.badlogic.gdx.tests;
 import java.util.Date;
 import java.util.Locale;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
@@ -44,7 +45,7 @@ public class I18NMessageTest extends GdxTest {
 	Date now = new Date();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		font = new BitmapFont();
 		batch = new SpriteBatch();
 

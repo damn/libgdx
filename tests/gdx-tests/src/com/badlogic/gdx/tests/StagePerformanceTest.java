@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -45,7 +46,7 @@ public class StagePerformanceTest extends GdxTest {
 	boolean useStage = true;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		font = new BitmapFont();
 		stage = new Stage(new ScalingViewport(Scaling.fit, 24, 12));

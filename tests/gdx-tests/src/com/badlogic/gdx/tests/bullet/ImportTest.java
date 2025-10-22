@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.bullet;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.loaders.ModelLoader;
 import com.badlogic.gdx.graphics.g3d.Model;
@@ -28,6 +29,8 @@ import com.badlogic.gdx.physics.bullet.dynamics.btDynamicsWorld;
 import com.badlogic.gdx.physics.bullet.dynamics.btRigidBody;
 import com.badlogic.gdx.physics.bullet.extras.btBulletWorldImporter;
 import com.badlogic.gdx.utils.JsonReader;
+
+import javax.swing.*;
 
 public class ImportTest extends BaseBulletTest {
 	btBulletWorldImporter importer;
@@ -58,8 +61,8 @@ public class ImportTest extends BaseBulletTest {
 	}
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 
 		ModelLoader g3djLoader = new G3dModelLoader(new JsonReader());
 		model = g3djLoader.loadModel(Gdx.files.internal("data/g3d/btscene1.g3dj"));

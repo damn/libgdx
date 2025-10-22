@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
@@ -47,7 +48,7 @@ public class SoundTest extends GdxTest {
 	Skin skin;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 		ui = new Stage(new FitViewport(640, 400));

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.files.FileHandle;
@@ -27,7 +28,7 @@ public class ExternalMusicTest extends GdxTest {
 	Music music;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// copy an internal mp3 to the external storage
 		FileHandle src = Gdx.files.internal("data/8.12.mp3");
 		FileHandle dst = Gdx.files.external("8.12.mp3");

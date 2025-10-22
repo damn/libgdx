@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -62,7 +63,7 @@ public class CpuSpriteBatchTest extends GdxTest {
 	private long sampleStartTime;
 	private long sampleFrames;
 
-	public void create () {
+	public void create (Application app) {
 		Batch batch = new CpuSpriteBatch();
 		// batch = new SpriteBatch();
 

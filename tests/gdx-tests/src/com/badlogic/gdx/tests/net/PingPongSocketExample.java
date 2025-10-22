@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Net.Protocol;
 import com.badlogic.gdx.net.ServerSocket;
@@ -35,7 +36,7 @@ import com.badlogic.gdx.tests.utils.GdxTest;
  * @author badlogic */
 public class PingPongSocketExample extends GdxTest {
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// setup a server thread where we wait for incoming connections
 		// to the server
 		new Thread(new Runnable() {

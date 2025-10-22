@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -33,7 +34,7 @@ public class SpriteBatchOriginScaleTest extends GdxTest {
 	ShapeRenderer renderer;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		region = new TextureRegion(new Texture("data/badlogicsmall.jpg"));
 		batch = new SpriteBatch();
 		renderer = new ShapeRenderer();

@@ -19,6 +19,7 @@ package com.badlogic.gdx.tests;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ArrayMap;
@@ -616,7 +617,7 @@ public class CollectionsTest extends GdxTest {
 		if (popped != 610.04565f) throw new RuntimeException("Should be 610.04565, but is " + popped);
 	}
 
-	public void create () {
+	public void create (Application app) {
 		testMap(ObjectMap.class, values, valuesWithNulls);
 		testMap(OrderedMap.class, values, valuesWithNulls);
 		testMap(IdentityMap.class, values, valuesWithNulls);

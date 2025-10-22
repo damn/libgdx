@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.extensions;
 
 import java.util.EnumMap;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap.Format;
@@ -82,7 +83,7 @@ public class FreeTypePackTest extends GdxTest {
 		+ "\"!`?'.,;:()[]{}<>|/@\\^$-%+=#_&~*";
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		camera = new OrthographicCamera();
 		batch = new SpriteBatch();
 

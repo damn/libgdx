@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
@@ -47,7 +48,7 @@ public class Basic3DSceneTest extends GdxTest implements ApplicationListener {
 	public ModelInstance space;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		modelBatch = new ModelBatch();
 		lights = new Environment();
 		lights.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1.f));

@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.Arrays;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.GL20;
@@ -53,7 +54,7 @@ public class EdgeDetectionTest extends GdxTest {
 
 	float[] offsets = new float[18];
 
-	public void create () {
+	public void create (Application app) {
 		ShaderProgram.pedantic = false;
 		/*
 		 * shader = new ShaderProgram(Gdx.files.internal("data/shaders/default.vert").readString(), Gdx.files.internal(

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
@@ -41,7 +42,7 @@ public class ParticleEmitterChangeSpriteTest extends GdxTest {
 	InputProcessor inputProcessor;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 
 		atlas = new TextureAtlas("data/particles.atlas");

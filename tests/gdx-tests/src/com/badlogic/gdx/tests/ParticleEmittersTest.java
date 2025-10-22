@@ -16,10 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.InputAdapter;
-import com.badlogic.gdx.InputMultiplexer;
-import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.*;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEffectPool;
@@ -53,7 +50,7 @@ public class ParticleEmittersTest extends GdxTest {
 	Label logLabel;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 
 		effect = new ParticleEffect();

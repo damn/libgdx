@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -39,8 +40,8 @@ public class HexagonalTiledMapTest extends GdxTest {
 	Texture hexture;
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		float w = Gdx.graphics.getWidth();
 		float h = Gdx.graphics.getHeight();
 

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g2d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
@@ -34,7 +35,7 @@ public class ProgressiveJPEGTest extends GdxTest {
 	private Texture texture;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 
 		texture = new Texture(Gdx.files.internal("data/g2d/progressive-libgdx.jpg"));

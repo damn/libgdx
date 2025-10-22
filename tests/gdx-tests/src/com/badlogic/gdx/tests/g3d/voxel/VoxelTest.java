@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d.voxel;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.PerspectiveCamera;
@@ -43,7 +44,7 @@ public class VoxelTest extends GdxTest {
 	VoxelWorld voxelWorld;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 		font = new BitmapFont();
 		modelBatch = new ModelBatch();

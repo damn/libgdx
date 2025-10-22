@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.gles31;
 
 import java.nio.IntBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -67,7 +68,7 @@ public class GL31IndirectDrawingNonIndexedTest extends GdxTest {
 	int nbCommands = 2;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		drawCommands = Gdx.gl.glGenBuffer();
 		IntBuffer buffer = BufferUtils.newIntBuffer(commandInts * nbCommands);

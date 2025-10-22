@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.GL20;
@@ -55,7 +56,7 @@ public class MipMapTest extends GdxTest {
 	CheckBox hwMipMap;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		camera = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		camera.position.set(0, 1.5f, 1.5f);
 		camera.lookAt(0, 0, 0);

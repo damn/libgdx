@@ -28,11 +28,12 @@
 
 package com.badlogic.gdx.tests.utils;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.InputAdapter;
 
 public abstract class GdxTest extends InputAdapter implements ApplicationListener {
-	public void create () {
+	public void create (Application app) {
 	}
 
 	public void resume () {

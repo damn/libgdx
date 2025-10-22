@@ -3,6 +3,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.Iterator;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -37,7 +38,7 @@ public class TiledMapObjectPropertyTest extends GdxTest {
 	private boolean error;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		try {
 			TmxMapLoader loader = new TmxMapLoader();
 			// run multiple times to ensure reloading map works correctly

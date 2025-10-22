@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.nio.*;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Application.ApplicationType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
@@ -29,7 +30,7 @@ public class BufferUtilsTest extends GdxTest {
 	static final int NUM_MB = 5;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// Not emulated in gwt
 		// ByteBuffer bytebuffer = BufferUtils.newUnsafeByteBuffer(1000 * 1000);
 		// BufferUtils.disposeUnsafeByteBuffer(bytebuffer);

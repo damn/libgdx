@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.gles3;
 
 import java.nio.IntBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Application.ApplicationType;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -92,7 +93,7 @@ public class GL30Texture3DTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		int size = 8;
 		int w = size, h = size, d = size;
 		CustomTexture3DData data = new CustomTexture3DData(w, h, d, 0, GL30.GL_RGBA, GL30.GL_RGBA8, GL30.GL_UNSIGNED_BYTE);

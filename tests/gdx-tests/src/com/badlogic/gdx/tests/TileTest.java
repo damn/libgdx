@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.Random;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -42,7 +43,7 @@ public class TileTest extends GdxTest {
 	long startTime = TimeUtils.nanoTime();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		cam = new OrthographicCamera(480, 320);
 		cam.position.set(WIDTH * 32 / 2, HEIGHT * 32 / 2, 0);
 		camController = new OrthoCamController(cam);

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.TextInputListener;
@@ -30,7 +31,7 @@ public class TextInputDialogTest extends GdxTest {
 	BitmapFont font;
 	int inputType = 0;
 
-	public void create () {
+	public void create (Application app) {
 		message = "Touch screen for dialog";
 		batch = new SpriteBatch();
 		font = new BitmapFont();

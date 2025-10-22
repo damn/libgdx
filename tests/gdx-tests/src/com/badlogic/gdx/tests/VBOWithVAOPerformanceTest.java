@@ -21,6 +21,7 @@ import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.GL30;
@@ -63,7 +64,7 @@ public class VBOWithVAOPerformanceTest extends GdxTest {
 	WindowedMean oldCounterStress = new WindowedMean(100);
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		if (Gdx.gl30 == null) {
 			throw new GdxRuntimeException("GLES 3.0 profile required for this test");
 		}

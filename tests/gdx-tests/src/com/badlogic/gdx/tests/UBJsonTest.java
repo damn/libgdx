@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.JsonValue;
@@ -33,7 +34,7 @@ public class UBJsonTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		try {
 
 			UBJsonWriter uw = new UBJsonWriter(Gdx.files.external(fn).write(false));

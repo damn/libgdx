@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles2;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
@@ -36,7 +37,7 @@ public class SimpleVertexShader extends GdxTest {
 	float angle = 45;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// @off
 		String vertexShader =
 			  "uniform mat4 u_mvpMatrix;                   \n"

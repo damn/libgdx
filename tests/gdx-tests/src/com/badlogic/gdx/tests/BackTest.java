@@ -1,6 +1,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
@@ -23,7 +24,7 @@ public class BackTest extends GdxTest {
 	private int stackDepth;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		font = new BitmapFont();
 		Gdx.input.setInputProcessor(new InputAdapter() {

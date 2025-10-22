@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.InputStringValidator;
 import com.badlogic.gdx.Input.OnscreenKeyboardType;
@@ -33,7 +34,7 @@ public class NativeInputTest extends GdxTest {
 	private Stage stage;
 	private Skin skin;
 
-	public void create () {
+	public void create (Application app) {
 		stage = new Stage();
 		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
 

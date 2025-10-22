@@ -53,7 +53,7 @@ public class AssetManagerTest extends GdxTest implements AssetErrorListener {
 	int reloads = 0;
 	float elapsed = 0;
 
-	public void create () {
+	public void create (Application app) {
 		Gdx.app.setLogLevel(Application.LOG_ERROR);
 
 		Resolution[] resolutions = {new Resolution(320, 480, ".320480"), new Resolution(480, 800, ".480800"),

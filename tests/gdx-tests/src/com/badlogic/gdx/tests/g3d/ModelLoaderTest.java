@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
@@ -35,7 +36,7 @@ public class ModelLoaderTest extends GdxTest {
 	SpriteBatch spriteBatch;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		camera = new PerspectiveCamera(67, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		camera.position.set(0, 0, 5);
 		camera.near = 1;

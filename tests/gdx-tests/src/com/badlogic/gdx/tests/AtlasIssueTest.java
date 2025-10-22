@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -31,7 +32,7 @@ public class AtlasIssueTest extends GdxTest {
 	TextureAtlas atlas;
 	BitmapFont font;
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		batch.setProjectionMatrix(new Matrix4().setToOrtho2D(0, 0, 855, 480));
 		atlas = new TextureAtlas(Gdx.files.internal("data/issue_pack"), Gdx.files.internal("data/"));

@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import static com.badlogic.gdx.scenes.scene2d.actions.Actions.*;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -48,7 +49,7 @@ public class StageDebugTest extends GdxTest {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		textureRegion = new TextureRegion(new Texture("data/badlogic.jpg"));
 
 		Gdx.input.setInputProcessor(this);

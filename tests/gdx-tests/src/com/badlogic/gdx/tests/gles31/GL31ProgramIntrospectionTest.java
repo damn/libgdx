@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests.gles31;
 
 import java.nio.IntBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.GL31;
@@ -33,7 +34,7 @@ import com.badlogic.gdx.utils.BufferUtils;
 @GdxTestConfig(requireGL31 = true)
 public class GL31ProgramIntrospectionTest extends GdxTest {
 	@Override
-	public void create () {
+	public void create (Application app) {
 		ShaderProgram shader = SpriteBatch.createDefaultShader();
 		int program = shader.getHandle();
 

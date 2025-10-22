@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -29,7 +30,7 @@ public class CustomShaderSpriteBatchTest extends GdxTest {
 	Texture texture;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch(10);
 		ShaderProgram.pedantic = false;
 		shader = new ShaderProgram(Gdx.files.internal("data/shaders/batch.vert").readString(),

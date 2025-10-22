@@ -42,7 +42,7 @@ public class GL30FrameBufferMultisampleMRTTest extends GdxTest {
 	private ShaderProgram shader;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 
 		int nbSamples = 4;
 

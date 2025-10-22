@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics.DisplayMode;
 import com.badlogic.gdx.graphics.Color;
@@ -32,7 +33,7 @@ public class FullscreenTest extends GdxTest {
 	BitmapFont font;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		font = new BitmapFont();
 		tex = new Texture(Gdx.files.internal("data/badlogic.jpg"));

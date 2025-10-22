@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -31,7 +32,7 @@ public class PixelPerfectTest extends GdxTest {
 	Texture tex;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		Pixmap pixmap = new Pixmap(16, 16, Pixmap.Format.RGBA8888);
 		pixmap.setColor(Color.BLUE);
 		pixmap.fill();

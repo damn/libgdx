@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.tests.utils.GdxTest;
 import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.badlogic.gdx.utils.TimeUtils;
@@ -26,7 +27,7 @@ public class TimeUtilsTest extends GdxTest {
 	final long oneMilliInNanos = 1000000;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		// test nanos -> millis -> nanos
 		long now = TimeUtils.nanoTime();
 		long nowConvertToMillis = TimeUtils.nanosToMillis(now);

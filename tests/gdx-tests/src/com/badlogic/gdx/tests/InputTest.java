@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Buttons;
 import com.badlogic.gdx.Input.Keys;
@@ -25,7 +26,7 @@ import com.badlogic.gdx.tests.utils.GdxTest;
 public class InputTest extends GdxTest implements InputProcessor {
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 // Gdx.input = new RemoteInput();
 		Gdx.input.setInputProcessor(this);
 // Gdx.input.setCursorCatched(true);

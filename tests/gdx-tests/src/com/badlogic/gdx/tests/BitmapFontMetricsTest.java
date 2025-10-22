@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -34,7 +35,7 @@ public class BitmapFontMetricsTest extends GdxTest {
 	private ShapeRenderer renderer;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 		atlas = new TextureAtlas("data/pack.atlas");
 		smallFont = new BitmapFont();

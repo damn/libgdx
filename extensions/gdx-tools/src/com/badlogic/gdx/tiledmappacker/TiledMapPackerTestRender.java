@@ -18,6 +18,7 @@ package com.badlogic.gdx.tiledmappacker;
 
 import java.io.File;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
@@ -84,7 +85,7 @@ public class TiledMapPackerTestRender extends ApplicationAdapter {
 	}
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		String mapLocation = "";
 		switch (TEST_MAP_TYPE) {
 		case DEFAULT_TMX_MAP:

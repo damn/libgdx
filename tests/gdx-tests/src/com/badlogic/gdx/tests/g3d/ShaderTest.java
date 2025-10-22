@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.g3d;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Color;
@@ -185,7 +186,7 @@ public class ShaderTest extends GdxTest {
 	public TestAttribute testAttribute1, testAttribute2;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		modelBatch = new ModelBatch(new DefaultShaderProvider() {
 			@Override
 			protected Shader createShader (Renderable renderable) {

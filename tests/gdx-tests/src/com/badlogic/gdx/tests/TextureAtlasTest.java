@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
@@ -41,7 +42,7 @@ public class TextureAtlasTest extends GdxTest {
 	float time = 0;
 	ShapeRenderer renderer;
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		renderer = new ShapeRenderer();
 

@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests.gles2;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Mesh;
@@ -29,7 +30,7 @@ public class HelloTriangle extends GdxTest {
 	Mesh mesh;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		String vertexShader = "attribute vec4 vPosition;    \n" + "void main()                  \n"
 			+ "{                            \n" + "   gl_Position = vPosition;  \n" + "}                            \n";
 		String fragmentShader = "#ifdef GL_ES\n" + "precision mediump float;\n" + "#endif\n"

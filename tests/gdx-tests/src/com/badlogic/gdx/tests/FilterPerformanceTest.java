@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.GL20;
@@ -54,7 +55,7 @@ public class FilterPerformanceTest extends GdxTest {
 		modeString = (mode % 2 == 0 ? "Sprite" : "Atlas") + " " + filterNames[mode / 2];
 	}
 
-	public void create () {
+	public void create (Application app) {
 		batch = new SpriteBatch();
 		sceneMatrix = new Matrix4().setToOrtho2D(0, 0, 480, 320);
 		textMatrix = new Matrix4().setToOrtho2D(0, 0, 480, 320);

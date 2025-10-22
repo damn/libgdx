@@ -19,6 +19,7 @@ package com.badlogic.gdx.tests.bullet;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Mesh;
@@ -104,8 +105,8 @@ public class TriangleRaycastTest extends BaseBulletTest {
 	private Vector3 rayTo = new Vector3();
 
 	@Override
-	public void create () {
-		super.create();
+	public void create (Application app) {
+		super.create(app);
 		instructions = "Tap a triangle to ray cast\nLong press to toggle debug mode\nSwipe for next test\nCtrl+drag to rotate\nScroll to zoom";
 
 		shapeRenderer = new ShapeRenderer();

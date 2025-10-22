@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.tests.utils.GdxTest;
@@ -29,7 +30,7 @@ public class BlitTest extends GdxTest {
 	Texture psRgba8888;
 	SpriteBatch batch;
 
-	public void create () {
+	public void create (Application app) {
 		rgb888 = new Texture("data/bobrgb888-32x32.png");
 		rgba8888 = new Texture("data/bobargb8888-32x32.png");
 		psRgb888 = new Texture("data/alpha.png");

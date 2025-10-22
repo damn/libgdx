@@ -18,6 +18,7 @@ package com.badlogic.gdx.tests;
 
 import java.util.Random;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
@@ -48,7 +49,7 @@ public class CullTest extends GdxTest implements ApplicationListener {
 	final Vector3 pos = new Vector3();
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		ModelBuilder builder = new ModelBuilder();
 		sphere = builder.createSphere(2f, 2f, 2f, 16, 16, new Material(new ColorAttribute(ColorAttribute.Diffuse, Color.WHITE)),
 			Usage.Position | Usage.Normal);

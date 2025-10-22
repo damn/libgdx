@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.AudioDevice;
 import com.badlogic.gdx.audio.AudioRecorder;
@@ -28,7 +29,7 @@ public class AudioRecorderTest extends GdxTest {
 	AudioRecorder recorder;
 
 	@Override
-	public void create () {
+	public void create (Application app) {
 		device = Gdx.audio.newAudioDevice(44100, true);
 		recorder = Gdx.audio.newAudioRecorder(44100, true);
 

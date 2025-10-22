@@ -16,6 +16,7 @@
 
 package com.badlogic.gdx.tests;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -34,7 +35,7 @@ public class IntegerBitmapFontTest extends GdxTest {
 	BitmapFontCache multiLineCache;
 	SpriteBatch batch;
 
-	public void create () {
+	public void create (Application app) {
 		TextureAtlas textureAtlas = new TextureAtlas("data/pack.atlas");
 		font = new BitmapFont(Gdx.files.internal("data/verdana39.fnt"), textureAtlas.findRegion("verdana39"), false);
 		singleLineCache = new BitmapFontCache(font, true);
