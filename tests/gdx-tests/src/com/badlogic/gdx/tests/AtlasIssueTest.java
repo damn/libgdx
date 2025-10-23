@@ -35,10 +35,10 @@ public class AtlasIssueTest extends GdxTest {
 	public void create (Application app) {
 		batch = new SpriteBatch();
 		batch.setProjectionMatrix(new Matrix4().setToOrtho2D(0, 0, 855, 480));
-		atlas = new TextureAtlas(Gdx.files.internal("data/issue_pack"), Gdx.files.internal("data/"));
+		atlas = new TextureAtlas(app.getFiles().internal("data/issue_pack"), app.getFiles().internal("data/"));
 		sprite = atlas.createSprite("map");
-		font = new BitmapFont(Gdx.files.internal("data/font.fnt"), Gdx.files.internal("data/font.png"), false);
-		Gdx.gl.glClearColor(0, 1, 0, 1);
+		font = new BitmapFont(app.getFiles().internal("data/font.fnt"), app.getFiles().internal("data/font.png"), false);
+		app.getGraphics().getGL20().glClearColor(0, 1, 0, 1);
 	}
 
 	public void render () {

@@ -127,7 +127,7 @@ public abstract class Box2DTest implements ApplicationListener, InputProcessor {
 		createWorld(world);
 
 		batch = new SpriteBatch();
-		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-15.fnt"), false);
 	}
 
 	@Override

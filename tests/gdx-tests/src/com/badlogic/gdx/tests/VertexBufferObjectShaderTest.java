@@ -89,7 +89,7 @@ public class VertexBufferObjectShaderTest extends GdxTest {
 		//@on
 
 		shader = new ShaderProgram(vertexShader, fragmentShader);
-		if (Gdx.gl30 != null) {
+		if (app.getGraphics().getGL30() != null) {
 			vbo = new VertexBufferObjectWithVAO(true, 3, new VertexAttribute(VertexAttributes.Usage.Position, 2, "a_position"),
 				new VertexAttribute(VertexAttributes.Usage.TextureCoordinates, 2, "a_texCoords"),
 				new VertexAttribute(VertexAttributes.Usage.ColorPacked, 4, "a_color"));
@@ -105,7 +105,7 @@ public class VertexBufferObjectShaderTest extends GdxTest {
 		indices = new IndexBufferObject(3);
 		indices.setIndices(new short[] {0, 1, 2}, 0, 3);
 
-		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));
+		texture = new Texture(app.getFiles().internal("data/badlogic.jpg"));
 	}
 
 	@Override

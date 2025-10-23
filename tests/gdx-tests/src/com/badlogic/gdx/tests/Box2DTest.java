@@ -105,15 +105,15 @@ public class Box2DTest extends GdxTest implements InputProcessor {
 
 		// next we create a SpriteBatch and a font
 		batch = new SpriteBatch();
-		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-15.fnt"), false);
 		font.setColor(Color.RED);
-		textureRegion = new TextureRegion(new Texture(Gdx.files.internal("data/badlogicsmall.jpg")));
+		textureRegion = new TextureRegion(new Texture(app.getFiles().internal("data/badlogicsmall.jpg")));
 
 		// next we create out physics world.
 		createPhysicsWorld();
 
 		// register ourselfs as an InputProcessor
-		Gdx.input.setInputProcessor(this);
+		app.getInput().setInputProcessor(this);
 	}
 
 	private void createPhysicsWorld () {

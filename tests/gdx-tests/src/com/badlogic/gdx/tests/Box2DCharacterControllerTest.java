@@ -67,9 +67,9 @@ public class Box2DCharacterControllerTest extends GdxTest implements Application
 		renderer = new Box2DDebugRenderer();
 		cam = new OrthographicCamera(28, 20);
 		createWorld();
-		Gdx.input.setInputProcessor(this);
+		app.getInput().setInputProcessor(this);
 		batch = new SpriteBatch();
-		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-15.fnt"), false);
 	}
 
 	@Override

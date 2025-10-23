@@ -50,14 +50,14 @@ public class YDownTest extends GdxTest {
 	public void create (Application app) {
 		// a bitmap font to draw some text, note that we
 		// pass true to the constructor, which flips glyphs on y
-		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), true);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-15.fnt"), true);
 
 		// a texture region, note the flipping on y again
 		region = new TextureRegion(new Texture("data/badlogic.jpg"));
 		region.flip(false, true);
 
 		// a texture atlas, note the boolean
-		atlas = new TextureAtlas(Gdx.files.internal("data/pack.atlas"), true);
+		atlas = new TextureAtlas(app.getFiles().internal("data/pack.atlas"), true);
 
 		// a sprite, created from a region in the atlas
 		sprite = atlas.createSprite("badlogicsmall");
@@ -81,7 +81,7 @@ public class YDownTest extends GdxTest {
 		stage.addActor(image);
 
 		// finally we write up the stage as the input process and call it a day.
-		Gdx.input.setInputProcessor(stage);
+		app.getInput().setInputProcessor(stage);
 	}
 
 	@Override

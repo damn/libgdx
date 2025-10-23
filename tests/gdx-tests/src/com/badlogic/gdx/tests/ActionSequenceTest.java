@@ -42,7 +42,7 @@ public class ActionSequenceTest extends GdxTest implements Runnable {
 	@Override
 	public void create (Application app) {
 		stage = new Stage();
-		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"), false);
+		texture = new Texture(app.getFiles().internal("data/badlogic.jpg"), false);
 		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
 		img = new Image(new TextureRegion(texture));
 		img.setSize(100, 100);

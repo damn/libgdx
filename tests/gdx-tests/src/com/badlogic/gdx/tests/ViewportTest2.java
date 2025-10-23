@@ -66,13 +66,13 @@ public class ViewportTest2 extends GdxTest {
 		names = ViewportTest1.getViewportNames();
 		name = names.first();
 
-		Gdx.input.setInputProcessor(new InputAdapter() {
+		app.getInput().setInputProcessor(new InputAdapter() {
 			public boolean keyDown (int keycode) {
 				if (keycode == Input.Keys.SPACE) {
 					int index = (viewports.indexOf(viewport, true) + 1) % viewports.size;
 					name = names.get(index);
 					viewport = viewports.get(index);
-					resize(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+					resize(app.getGraphics().getWidth(), app.getGraphics().getHeight());
 				}
 				return false;
 			}

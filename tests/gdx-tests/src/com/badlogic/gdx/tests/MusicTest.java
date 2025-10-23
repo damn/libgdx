@@ -67,7 +67,7 @@ public class MusicTest extends GdxTest {
 		batch = new SpriteBatch();
 
 		stage = new Stage(new ExtendViewport(600, 480));
-		Skin skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		Skin skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 
 		Table sliderTable = new Table();
 		label = new Label("", skin);
@@ -143,7 +143,7 @@ public class MusicTest extends GdxTest {
 		stage.addActor(table);
 		stage.addActor(footerTable);
 
-		Gdx.input.setInputProcessor(stage);
+		app.getInput().setInputProcessor(stage);
 	}
 
 	void setSong (Song song) {

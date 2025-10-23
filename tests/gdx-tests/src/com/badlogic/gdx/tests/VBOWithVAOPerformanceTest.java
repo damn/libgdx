@@ -65,7 +65,7 @@ public class VBOWithVAOPerformanceTest extends GdxTest {
 
 	@Override
 	public void create (Application app) {
-		if (Gdx.gl30 == null) {
+		if (app.getGraphics().getGL30() == null) {
 			throw new GdxRuntimeException("GLES 3.0 profile required for this test");
 		}
 		String vertexShader = "attribute vec4 a_position;    \n" + "attribute vec4 a_color;\n" + "attribute vec2 a_texCoord0;\n"
@@ -80,8 +80,8 @@ public class VBOWithVAOPerformanceTest extends GdxTest {
 
 		shader = new ShaderProgram(vertexShader, fragmentShader);
 		if (shader.isCompiled() == false) {
-			Gdx.app.log("ShaderTest", shader.getLog());
-			Gdx.app.exit();
+			app.log("ShaderTest", shader.getLog());
+			app.exit();
 		}
 
 		int numSprites = 1000;
@@ -118,7 +118,7 @@ public class VBOWithVAOPerformanceTest extends GdxTest {
 		oldVBOWithVAOMesh.setVertices(vertexArray);
 		oldVBOWithVAOMesh.setIndices(indexArray);
 
-		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));
+		texture = new Texture(app.getFiles().internal("data/badlogic.jpg"));
 
 		batch = new SpriteBatch();
 		bitmapFont = new BitmapFont();

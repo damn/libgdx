@@ -61,9 +61,9 @@ public class GroupTest extends GdxTest {
 		renderer = new ShapeRenderer();
 
 		stage = new Stage(new ScreenViewport());
-		Gdx.input.setInputProcessor(stage);
+		app.getInput().setInputProcessor(stage);
 
-		region = new TextureRegion(new Texture(Gdx.files.internal("data/group-debug.png")));
+		region = new TextureRegion(new Texture(app.getFiles().internal("data/group-debug.png")));
 
 		group2 = new TestGroup("group2");
 		group2.setTransform(true);
@@ -76,7 +76,7 @@ public class GroupTest extends GdxTest {
 		LabelStyle style = new LabelStyle();
 		style.font = new BitmapFont();
 
-		Texture texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));
+		Texture texture = new Texture(app.getFiles().internal("data/badlogic.jpg"));
 
 		horiz = new HorizontalGroup().pad(10, 20, 30, 40).top().space(5).reverse();
 		for (int i = 1; i <= 15; i++) {

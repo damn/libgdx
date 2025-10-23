@@ -38,8 +38,8 @@ public class TableLayoutTest extends GdxTest {
 
 	public void create (Application app) {
 		stage = new Stage();
-		Gdx.input.setInputProcessor(stage);
-		Skin skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		app.getInput().setInputProcessor(stage);
+		Skin skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 
 		Label nameLabel = new Label("Name:", skin);
 		TextField nameText = new TextField("", skin);

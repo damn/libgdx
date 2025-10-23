@@ -42,7 +42,7 @@ public class BitmapFontFlipTest extends GdxTest {
 
 	@Override
 	public void create (Application app) {
-		Gdx.input.setInputProcessor(new InputAdapter() {
+		app.getInput().setInputProcessor(new InputAdapter() {
 			public boolean touchDown (int x, int y, int pointer, int newParam) {
 				renderMode = (renderMode + 1) % 4;
 				return false;
@@ -50,15 +50,15 @@ public class BitmapFontFlipTest extends GdxTest {
 		});
 
 		spriteBatch = new SpriteBatch();
-		spriteBatch.setProjectionMatrix(new Matrix4().setToOrtho(0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), 0, 0, 1));
+		spriteBatch.setProjectionMatrix(new Matrix4().setToOrtho(0, app.getGraphics().getWidth(), app.getGraphics().getHeight(), 0, 0, 1));
 
-		texture = new Texture(Gdx.files.internal("data/badlogic.jpg"));
+		texture = new Texture(app.getFiles().internal("data/badlogic.jpg"));
 		logoSprite = new Sprite(texture);
 		logoSprite.flip(false, true);
 		logoSprite.setPosition(0, 320 - 256);
 		logoSprite.setColor(1, 1, 1, 0.5f);
 
-		font = new BitmapFont(Gdx.files.internal("data/verdana39.fnt"), Gdx.files.internal("data/verdana39.png"), true);
+		font = new BitmapFont(app.getFiles().internal("data/verdana39.fnt"), app.getFiles().internal("data/verdana39.png"), true);
 
 		cache1 = font.newFontCache();
 		cache2 = font.newFontCache();

@@ -54,7 +54,7 @@ public class AssetManagerTest extends GdxTest implements AssetErrorListener {
 	float elapsed = 0;
 
 	public void create (Application app) {
-		Gdx.app.setLogLevel(Application.LOG_ERROR);
+		app.setLogLevel(Application.LOG_ERROR);
 
 		Resolution[] resolutions = {new Resolution(320, 480, ".320480"), new Resolution(480, 800, ".480800"),
 			new Resolution(480, 856, ".480854")};
@@ -65,7 +65,7 @@ public class AssetManagerTest extends GdxTest implements AssetErrorListener {
 		load();
 		Texture.setAssetManager(manager);
 		batch = new SpriteBatch();
-		font = new BitmapFont(Gdx.files.internal("data/font.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/font.fnt"), false);
 		skin = new Skin();
 
 	}

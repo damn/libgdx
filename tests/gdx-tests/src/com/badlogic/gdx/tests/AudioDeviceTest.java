@@ -41,7 +41,7 @@ public class AudioDeviceTest extends GdxTest {
 	@Override
 	public void create (Application app) {
 
-		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 		ui = new Stage(new FitViewport(640, 400));
 
 		Table table = new Table(skin);
@@ -55,7 +55,7 @@ public class AudioDeviceTest extends GdxTest {
 
 		ui.addActor(table);
 
-		Gdx.input.setInputProcessor(ui);
+		app.getInput().setInputProcessor(ui);
 
 		pan.addListener(new ChangeListener() {
 			public void changed (ChangeEvent event, Actor actor) {
@@ -66,7 +66,7 @@ public class AudioDeviceTest extends GdxTest {
 
 		if (thread == null) {
 			final int samplingFrequency = 44100;
-			final AudioDevice device = Gdx.app.getAudio().newAudioDevice(samplingFrequency, false);
+			final AudioDevice device = app.getAudio().newAudioDevice(samplingFrequency, false);
 			thread = new Thread(new Runnable() {
 				@Override
 				public void run () {

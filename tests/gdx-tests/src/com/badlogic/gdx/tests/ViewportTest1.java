@@ -44,7 +44,7 @@ public class ViewportTest1 extends GdxTest {
 
 	public void create (Application app) {
 		stage = new Stage();
-		Skin skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		Skin skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 
 		label = new Label("", skin);
 
@@ -64,7 +64,7 @@ public class ViewportTest1 extends GdxTest {
 		stage.setViewport(viewports.first());
 		label.setText(names.first());
 
-		Gdx.input.setInputProcessor(new InputMultiplexer(new InputAdapter() {
+		app.getInput().setInputProcessor(new InputMultiplexer(new InputAdapter() {
 			public boolean keyDown (int keycode) {
 				if (keycode == Input.Keys.SPACE) {
 					int index = (viewports.indexOf(stage.getViewport(), true) + 1) % viewports.size;

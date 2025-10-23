@@ -67,7 +67,7 @@ public class BulletTestCollection extends GdxTest implements InputProcessor, Ges
 	@Override
 	public void create (Application app) {
 		if (app == null) {
-			app = Gdx.app;
+			app = app;
 			tests[testIndex].create(app);
 		}
 
@@ -76,9 +76,9 @@ public class BulletTestCollection extends GdxTest implements InputProcessor, Ges
 		cameraController.autoUpdate = false;
 		cameraController.forwardTarget = false;
 		cameraController.translateTarget = false;
-		Gdx.input.setInputProcessor(new InputMultiplexer(cameraController, this, new GestureDetector(this)));
+		app.getInput().setInputProcessor(new InputMultiplexer(cameraController, this, new GestureDetector(this)));
 
-		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-15.fnt"), false);
 		hud = new Stage();
 		hud.addActor(fpsLabel = new Label(" ", new Label.LabelStyle(font, Color.WHITE)));
 		fpsLabel.setPosition(0, 0);

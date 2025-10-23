@@ -29,7 +29,7 @@ public class AccelerometerTest extends GdxTest {
 
 	@Override
 	public void create (Application app) {
-		font = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-15.fnt"), false);
 		batch = new SpriteBatch();
 	}
 

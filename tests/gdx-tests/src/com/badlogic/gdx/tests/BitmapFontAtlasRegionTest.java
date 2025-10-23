@@ -48,7 +48,7 @@ public class BitmapFontAtlasRegionTest extends GdxTest {
 		this.fonts[2].setColor(Color.GREEN);
 		this.testStrings = new String[] {"I'm loaded from an atlas!", "I, too, am loaded from an atlas", "I'm with stupid ^"};
 
-		Gdx.gl.glClearColor(1, 1, 1, 1);
+		app.getGraphics().getGL20().glClearColor(1, 1, 1, 1);
 	}
 
 	@Override

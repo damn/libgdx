@@ -25,23 +25,23 @@ public class AudioChangeDeviceTest extends GdxTest {
 	@Override
 	public void create (Application app) {
 		stage = new Stage();
-		Gdx.input.setInputProcessor(stage);
-		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		app.getInput().setInputProcessor(stage);
+		skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 		final SelectBox<String> selectBox = new SelectBox<>(skin);
-		List<String> tmp = new ArrayList<>(Arrays.asList(Gdx.audio.getAvailableOutputDevices()));
+		List<String> tmp = new ArrayList<>(Arrays.asList(app.getAudio().getAvailableOutputDevices()));
 		tmp.add(0, "Auto");
 		selectBox.setItems(tmp.toArray(new String[0]));
-		sound = Gdx.audio.newSound(Gdx.files.internal("data").child("bubblepop-stereo-left-only.wav"));
+		sound = app.getAudio().newSound(app.getFiles().internal("data").child("bubblepop-stereo-left-only.wav"));
 		sound.loop();
 		selectBox.addListener(new ChangeListener() {
 
 			@Override
 			public void changed (ChangeEvent event, Actor actor) {
 				if (selectBox.getSelected().equals("Auto")) {
-					Gdx.app.getAudio().switchOutputDevice(null);
+					app.getAudio().switchOutputDevice(null);
 					return;
 				}
-				Gdx.app.getAudio().switchOutputDevice(selectBox.getSelected());
+				app.getAudio().switchOutputDevice(selectBox.getSelected());
 			}
 		});
 		selectBox.setWidth(200);

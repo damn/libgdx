@@ -17,6 +17,7 @@
 package com.badlogic.gdx.tests;
 
 import com.badlogic.gdx.Application;
+import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -69,15 +70,16 @@ public class BitmapFontDistanceFieldTest extends GdxTest {
 		camera = new OrthographicCamera();
 		spriteBatch = new SpriteBatch();
 
-		descriptionFont = new BitmapFont(Gdx.files.internal("data/lsans-15.fnt"), true);
+		Files files = app.getFiles();
+		descriptionFont = new BitmapFont(files.internal("data/lsans-15.fnt"), true);
 		descriptionFont.setColor(Color.RED);
 
-		regularTexture = new Texture(Gdx.files.internal("data/verdana39.png"), true);
-		regularFont = new BitmapFont(Gdx.files.internal("data/verdana39.fnt"), new TextureRegion(regularTexture), true);
+		regularTexture = new Texture(files.internal("data/verdana39.png"), true);
+		regularFont = new BitmapFont(files.internal("data/verdana39.fnt"), new TextureRegion(regularTexture), true);
 		regularFont.setColor(COLOR);
 
-		distanceFieldTexture = new Texture(Gdx.files.internal("data/verdana39distancefield.png"), true);
-		distanceFieldFont = new BitmapFont(Gdx.files.internal("data/verdana39distancefield.fnt"),
+		distanceFieldTexture = new Texture(files.internal("data/verdana39distancefield.png"), true);
+		distanceFieldFont = new BitmapFont(files.internal("data/verdana39distancefield.fnt"),
 			new TextureRegion(distanceFieldTexture), true);
 		distanceFieldFont.setColor(COLOR);
 

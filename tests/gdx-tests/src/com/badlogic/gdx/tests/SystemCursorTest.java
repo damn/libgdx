@@ -38,9 +38,9 @@ public class SystemCursorTest extends GdxTest {
 	public void create (Application app) {
 		super.create(app);
 		stage = new Stage(new ScreenViewport());
-		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 
-		Gdx.input.setInputProcessor(stage);
+		app.getInput().setInputProcessor(stage);
 
 		Table table = new Table();
 		table.setFillParent(true);
@@ -51,7 +51,7 @@ public class SystemCursorTest extends GdxTest {
 			button.addListener(new ChangeListener() {
 				@Override
 				public void changed (ChangeEvent event, Actor actor) {
-					Gdx.graphics.setSystemCursor(cursor);
+					app.getGraphics().setSystemCursor(cursor);
 				}
 			});
 			table.add(button).row();

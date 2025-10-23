@@ -52,13 +52,13 @@ public class BitmapFontTest extends GdxTest {
 	public void create (Application app) {
 		spriteBatch = new SpriteBatch();
 		// font = new BitmapFont(Gdx.files.internal("data/verdana39.fnt"), false);
-		font = new BitmapFont(Gdx.files.internal("data/lsans-32-pad.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-32-pad.fnt"), false);
 		smallFont = new BitmapFont(); // uses LSans 15, the default
 		// font = new FreeTypeFontGenerator(Gdx.files.internal("data/lsans.ttf")).generateFont(new FreeTypeFontParameter());
 		font.getData().markupEnabled = true;
 		font.getData().breakChars = new char[] {'-'};
 
-		multiPageFont = new BitmapFont(Gdx.files.internal("data/multipagefont.fnt"));
+		multiPageFont = new BitmapFont(app.getFiles().internal("data/multipagefont.fnt"));
 
 		// Add user defined color
 		Colors.put("PERU", Color.valueOf("CD853F"));
@@ -68,7 +68,7 @@ public class BitmapFontTest extends GdxTest {
 
 		stage = new Stage(new ScreenViewport());
 
-		Skin skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		Skin skin = new Skin(app.getFiles().internal("data/uiskin.json"));
 
 		BitmapFont labelFont = skin.get("default-font", BitmapFont.class);
 		labelFont.getData().markupEnabled = true;

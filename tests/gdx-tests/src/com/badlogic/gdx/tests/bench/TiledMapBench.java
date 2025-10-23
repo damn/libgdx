@@ -49,21 +49,21 @@ public class TiledMapBench extends GdxTest {
 
 	@Override
 	public void create (Application app) {
-		float w = Gdx.graphics.getWidth();
-		float h = Gdx.graphics.getHeight();
+		float w = app.getGraphics().getWidth();
+		float h = app.getGraphics().getHeight();
 
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false, (w / h) * 320, 320);
 		camera.update();
 
 		cameraController = new OrthoCamController(camera);
-		Gdx.input.setInputProcessor(cameraController);
+		app.getInput().setInputProcessor(cameraController);
 
 		font = new BitmapFont();
 		batch = new SpriteBatch();
 
 		{
-			tiles = new Texture(Gdx.files.internal("data/maps/tiled/tiles.png"));
+			tiles = new Texture(app.getFiles().internal("data/maps/tiled/tiles.png"));
 			TextureRegion[][] splitTiles = TextureRegion.split(tiles, 32, 32);
 			map = new TiledMap();
 			MapLayers layers = map.getLayers();

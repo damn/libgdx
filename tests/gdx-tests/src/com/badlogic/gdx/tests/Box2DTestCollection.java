@@ -61,7 +61,7 @@ public class Box2DTestCollection extends GdxTest implements InputProcessor, Gest
 	@Override
 	public void create (Application app) {
 		if (this.app == null) {
-			this.app = Gdx.app;
+			this.app = app;
 			Box2DTest test = tests[testIndex];
 			test.create(app);
 		}
@@ -69,7 +69,7 @@ public class Box2DTestCollection extends GdxTest implements InputProcessor, Gest
 		InputMultiplexer multiplexer = new InputMultiplexer();
 		multiplexer.addProcessor(this);
 		multiplexer.addProcessor(new GestureDetector(this));
-		Gdx.input.setInputProcessor(multiplexer);
+		app.getInput().setInputProcessor(multiplexer);
 	}
 
 	@Override

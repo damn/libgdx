@@ -39,8 +39,8 @@ public class BitmapFontMetricsTest extends GdxTest {
 		spriteBatch = new SpriteBatch();
 		atlas = new TextureAtlas("data/pack.atlas");
 		smallFont = new BitmapFont();
-		font = new BitmapFont(Gdx.files.internal("data/verdana39.fnt"), atlas.findRegion("verdana39"), false);
-		font = new BitmapFont(Gdx.files.internal("data/lsans-32-pad.fnt"), false);
+		font = new BitmapFont(app.getFiles().internal("data/verdana39.fnt"), atlas.findRegion("verdana39"), false);
+		font = new BitmapFont(app.getFiles().internal("data/lsans-32-pad.fnt"), false);
 		renderer = new ShapeRenderer();
 		renderer.setProjectionMatrix(spriteBatch.getProjectionMatrix());
 	}

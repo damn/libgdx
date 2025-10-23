@@ -17,7 +17,7 @@ public class UtfFontTest extends GdxTest {
 	@Override
 	public void create (Application app) {
 		batch = new SpriteBatch();
-		font = new BitmapFont(Gdx.files.internal("data/utf-font.fnt"));
+		font = new BitmapFont(app.getFiles().internal("data/utf-font.fnt"));
 	}
 
 	@Override
