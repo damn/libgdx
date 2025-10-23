@@ -50,7 +50,8 @@ public class BitmapFontFlipTest extends GdxTest {
 		});
 
 		spriteBatch = new SpriteBatch();
-		spriteBatch.setProjectionMatrix(new Matrix4().setToOrtho(0, app.getGraphics().getWidth(), app.getGraphics().getHeight(), 0, 0, 1));
+		spriteBatch
+			.setProjectionMatrix(new Matrix4().setToOrtho(0, app.getGraphics().getWidth(), app.getGraphics().getHeight(), 0, 0, 1));
 
 		texture = new Texture(app.getFiles().internal("data/badlogic.jpg"));
 		logoSprite = new Sprite(texture);

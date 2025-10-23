@@ -29,7 +29,7 @@ import com.badlogic.gdx.graphics.GL32;
  * @author mzechner */
 
 // 3164 Usages !!
-	// Let's see how many ApplicationListener changes will remove
+// Let's see how many ApplicationListener changes will remove
 
 public class Gdx {
 	public static Application app;

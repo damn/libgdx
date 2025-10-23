@@ -2,7 +2,6 @@
 package com.badlogic.gdx.tests.bullet;
 
 import com.badlogic.gdx.Application;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.bullet.collision.CustomCollisionDispatcher;
 import com.badlogic.gdx.physics.bullet.collision.btCollisionConfiguration;
